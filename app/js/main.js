@@ -30,6 +30,22 @@ $(document).ready(function () {
     });
   });
 
+
+  //  ФАК аккордеон
+  $('.accordion__header').on('click', function () {
+    if ($(this).hasClass('accordion__header--active')) {
+      $(this).removeClass('accordion__header--active');
+      $(this).next().slideUp();
+    } else {
+      $('.accordion__text').slideUp();
+      $('.accordion__header').removeClass('accordion__header--active');
+      $(this).addClass('accordion__header--active');
+      $(this).next().slideDown();
+    };
+  });
+
+
+
 });
 
 

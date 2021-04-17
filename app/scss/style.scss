@@ -487,12 +487,8 @@ label {
 // /offer
 
 // works
-.section {
-}
 .works {
   padding: 100px 0 50px;
-  &__title {
-  }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -511,17 +507,14 @@ label {
   height: auto;
   overflow: hidden;
 }
-
 .img-comp-img img {
   display: block;
   vertical-align: middle;
   width: 460px;
   height: 290px;
 }
-
 .img-comp-slider {
   position: absolute;
-  // position: relative;
   z-index: 5;
   cursor: ew-resize;
   /*set the appearance of the slider:*/
@@ -556,10 +549,7 @@ label {
     right: 5px;
   }
 }
-
-
-
-
+// /works
 
 // equipment
 .equipment {
@@ -597,6 +587,65 @@ label {
   }
 }
 // /equipment
+
+//  faq
+.faq {
+  padding: 50px 0;
+}
+.accordion {
+  width: 100%;
+  &__item {
+    max-width: 690px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+  }
+  &__header {
+    padding: 0px 20px 0px 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #11325A;
+    &::before {
+      content: '+';
+      font-family: Montserrat;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 30px;
+      text-align: center;
+      color: #000000;
+      position: absolute;
+      top: -4px;
+      left: 0px;
+      width: 30px;
+      height: 30px;
+      background: rgba(137, 247, 254, 0.8);
+      border-radius: 2px;
+      // background-image: url('../images/arrow_down.svg');
+      // background-repeat: no-repeat;
+      // background-position: center center;
+      transition: .5s;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &--active {
+      text-decoration: underline;
+      &::before {
+        content: '\2212';
+      }
+    }
+  }
+  &__text {
+    padding: 0 0 5px 50px;
+    display: none;
+  }
+}
+// /faq
 
 
 
