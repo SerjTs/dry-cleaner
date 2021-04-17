@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Химчистка</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="header-top">
+        
+        <a href="index.html" class="header-top__logo">АСК</a>
+
+        <span class="header-top__map header-icon">
+          <div class="header-top__icon">
+            <img src="images/svg/map-pin.svg" alt="Icon: map-pin" class="icon-map">
+          </div>
+          <span class="header-top__siti">Санкт - Петербург</span>
+        </span>
+
+        <span class="header-top__phone header-icon">
+          <div class="header-top__icon">
+            <img src="images/svg/call-phone.svg" alt="Icon: call-phone" class="icon">
+          </div>
+          <a href="tel:+7-952-282-85-36" class="header-top__phone-number">+7-952-282-85-36</a>
+        </span>
+      </div>
+      <!-- /.header-top -->
+      
+    </div>
+    <!-- /.container header-container -->
+  </header>
+  <div class="header-bottom">
+    <div class="container">
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link">ГЛАВНАЯ</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link">СТОИМОСТЬ</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link">ОБОРУДОВАНИЕ</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link">НАШИ РАБОТЫ</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link">ВОПРОСЫ</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link">КОНТАКТЫ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+  <section class="mainpage">
+    <div class="container">
+      <h1 class="mainpage__title title">ПРОФЕССИОНАЛЬНАЯ ХИМИЧЕСКАЯ ЧИСТКА МЕБЕЛИ</h1>
+      <span class="mainpage__subtitle">Избавим от пыли, пятен и запахов текстильную и кожаную мебель</span>
+      <div class="mainpage-info">
+        <div class="card">
+          <span class="card-title">Закажите звонок  сегодня<br>
+            <span class="card-closeout">и получите скидку  15%</span>
+          </span>
+          <form action="Send.php" method="POST" class="form bell">
+            <div class="mainpage-input__group">
+              <input type="text" class="input bell-input" name="name" required minlength="3" placeholder="имя">
+            </div>
+            <div class="mainpage-input__group">
+              <input type="text" class="input bell-input phone" name="phone" required minlength="16">
+            </div>
+            <button class="button bell-button">ЗАКАЗАТЬ ЗВОНОК</button>
+          </form>
+        </div>
+        <div class="card-img">
+          <img src="images/divan-bg.png" alt="Icon: divan" class="card-image">
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.mainpage -->
+
+
+  <section class="pricelist">
+    <div class="container">
+      <h1 class="pricelist__title title">ПРАЙС - ЛИСТ</h1>
+
+
+      <table class="table">
+            <tbody>
+              <tr>
+                <th class="table-title ">
+                  ДИВАНЫ
+                  <div class="table-img">
+                    <img src="images/divan96.png" alt="Icon:divan">
+                  </div>
+                </th>
+                <td class="table__subtitle">1  сидячее место
+                <span class="table-dop">За каждые 50 см длины </span>  
+                </td>
+                <td></td>
+                <td class="gop"></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 500 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 650 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">2 сидячих места
+                <span class="table-dop">До 100 см в длину (не раскладывая)</span>
+                </td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 1000 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 1300 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">3 сидячих места
+                <span class="table-dop">До 150 см в длину (не раскладывая)</span> </td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 1500 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 1950 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">4 сидячих места
+                <span class="table-dop">До 200 см в длину (не раскладывая)</span> </td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 2000 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 2600 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="table-img">
+                    <img src="images/divan.png" alt="Icon:divan">
+                  </div>
+                </td>
+                <td class="table__subtitle">Угловой диван 
+                <span class="table-dop table__superfluous">не раскладывая</span> </td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 2000 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 2600 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__text">раскладывая,  включая спальное место</td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 2500 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 3250 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">Кухонный уголок</td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 2000 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 2600 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="table-title ">
+                  КРЕСЛА
+                  <div class="table-img">
+                    <img src="images/kresvo96.png" alt="Icon:divan">
+                  </div>
+                </td>
+                <td class="table__subtitle">Нераскладываемое кресло</td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 700 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 910 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">Кресло-кровать</td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 1000 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 1300 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">Офисное кресло</td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 500 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 650 р</td>
+              </tr>
+              <tr>
+                <td> </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="table-title ">
+                  СТУЛЬЯ И ПУФЫ
+                  <div class="table-img">
+                    <img src="images/chair1.png" alt="Icon:divan">
+                  </div>
+                </td>
+                <td class="table__subtitle">Стул с мягкой спинкой</td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 500 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 650 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">Стул без спинки</td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 500 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 650 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">Пуф/банкетка</td>
+                <td></td>
+                <td></td>
+                <td class="table__text">Текстиль</td>
+                <td></td>
+                <td class="table__text">от 300 р</td>
+                <td class="table__aside"></td>
+                <td class="table__text">Кожа</td>
+                <td class="table__aside"></td>
+                <td class="table__text">от 300 р</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="table-title ">
+                  МАТРАСЫ
+                  <div class="table-img">
+                    <img src="images/mattress1.png" alt="Icon:divan">
+                  </div>
+                </td>
+                <td class="table__subtitle">70-90х200
+                <span class="table-dop table__superfluous">с одной стороны/с двух сторон </span> </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" class="table__text"> от 1000 / 1500 р</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">91-140х200
+                <span class="table-dop">с одной стороны двух сторон</span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" class="table__text"> от 1500 / 1800 р</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">141-180х200
+                <span class="table-dop"> с одной стороны/с двух сторон</span> </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" class="table__text"> от 1800 / 2300 р</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="table-title ">
+                  ДОПОЛНИТЕЛЬНО
+                  <div class="table-img">
+                    <img src="images//pillows1.png" alt="Icon:divan">
+                  </div>
+                </td>
+                <td class="table__subtitle">Спальное место</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" class="table__text">от 500 р. за место
+          </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="table__subtitle">Дополнительные подушки</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" class="table__text">от 100 р./шт</td>
+                <td></td>
+              </tr>
+              <tr>
+              </tr>
+            </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- /.pricelist -->
+<section class="calculator">
+  <div class="container calculator__conteiner">
+    <div class="calculator__card">
+      <div class="calculator__contents">
+        <h1 class="calculator__title title">КАЛЬКУЛЯТОР СТОИМОСТИ</h1>
+            <div class="calculator__information">
+              <div class="calculator__info">
+
+            <span class="calculator__name calculator__name--couch">Диван</span>
+              <div class="counter">
+                <button class="counter__button" id="buttonCountPlus" ><img src="images/svg/plus.svg" alt=""></button>
+                <div id="buttonCountNumber">0</div>
+                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <input type="hidden" value="1" id="num" name="num">
+              </div>
+              <div class="calculator__resource">
+                <div class="calculator__form">
+                    <input class="calculator__material" placeholder="материал">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+                   <div class="calculator__form">
+                    <input class="calculator__material" placeholder="тип">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div> 
+                  <div class="calculator__form">
+                    <input class="calculator__material" placeholder="размер">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+              </div>
+          </div>
+
+
+            <div class="calculator__info">
+              <span class="calculator__name calculator__name--armchair">Кресло</span>
+              <div class="counter">
+                <button class="counter__button" id="buttonCountPlus" ><img src="images/svg/plus.svg" alt=""></button>
+                <div id="buttonCountNumber">0</div>
+                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <input type="hidden" value="1" id="num" name="num">
+              </div>
+              <div class="calculator__resource">
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="материал">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="тип">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="размер">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+              </div>
+            </div>
+            <div class="calculator__info">
+              <span class="calculator__name calculator__name--chair">Стул</span>
+              <div class="counter">
+                <button class="counter__button" id="buttonCountPlus" ><img src="images/svg/plus.svg" alt=""></button>
+                <div id="buttonCountNumber">0</div>
+                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                
+                <input type="hidden" value="1" id="num" name="num">
+              </div>
+              <div class="calculator__resource">
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="материал">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="тип">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="размер">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+              </div>
+            </div>
+            <div class="calculator__info">
+              <span class="calculator__name calculator__name--pouffe">Пуф</span>
+              <div class="counter">
+                <button class="counter__button" id="buttonCountPlus" ><img src="images/svg/plus.svg" alt=""></button>
+                <div id="buttonCountNumber">0</div>
+                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <input type="hidden" value="1" id="num" name="num">
+              </div>
+              <div class="calculator__resource">
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="материал">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>            
+              </div>
+            </div>
+            <div class="calculator__info calculator__info--mattress">
+              <span class="calculator__name calculator__name--mattress">Матрас</span>
+              <div class="counter">
+                <button class="counter__button" id="buttonCountPlus" ><img src="images/svg/plus.svg" alt=""></button>
+                <div id="buttonCountNumber">0</div>
+                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <input type="hidden" value="1" id="num" name="num">
+              </div>
+              <div class="calculator__resource">
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="материал">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="тип">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="размер">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+
+              </div>
+            </div>
+            <div class="calculator__info calculator__info--prelast">
+              <span class="calculator__name ">Спальное место</span>
+              <div class="counter">
+                <button class="counter__button" id="buttonCountPlus" ><img src="images/svg/plus.svg" alt=""></button>
+                <div id="buttonCountNumber">0</div>
+                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <input type="hidden" value="1" id="num" name="num">
+              </div>
+              <div class="calculator__resource">
+                 <div class="calculator__form">
+                    <input class="calculator__material" placeholder="материал">
+                    <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+              </div>
+            </div>
+            <div class="calculator__info calculator__info--last">
+              <span class="calculator__name ">Съемная подушка</span>
+              <div class="counter">
+                <button class="counter__button" id="buttonCountPlus" ><img src="images/svg/plus.svg" alt=""></button> 
+                <div id="buttonCountNumber">0</div>
+                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <input type="hidden" value="1" id="num" name="num">
+              </div>
+                <div class="calculator__resource">
+                  <div class="calculator__form">
+                    <input class="calculator__material" placeholder="материал">
+                    <button class="calculator__arrow calculator-button "><img src="images/svg/arrow-down.svg" alt=""></button>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <button class="button calculator__btn">РАССЧИТАТЬ СТОИМОСТЬ</button>
+        </div>
+    </div>
+      <span class="calculator__requer">МИНИМАЛЬНАЯ СУММА ЗАКАЗА 2500 р.</span>
+  </div>
+</section>
+
+
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/jquery.mask.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

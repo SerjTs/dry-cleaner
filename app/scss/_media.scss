@@ -1,0 +1,99 @@
+@media (max-width: 1024px) {
+  .container {
+    max-width: 729px;
+  }
+
+  .header {
+    &-container {
+      max-width: 692px;
+    }
+
+    &-top {
+      &__map {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      &__logo {
+        font-size: 13px;
+        line-height: 16px;
+      }
+
+      &__siti {
+        font-size: 13px;
+        line-height: 16px;
+      }
+
+      &__phone {
+        padding: 11px 32px 10px 32px;
+
+        &-number {
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+
+      &-bottom {
+        max-width: 729px;
+      }
+    }
+  }
+
+  .icon {
+    width: 16px;
+    height: 15px;
+
+    &-map {
+      width: 11px;
+      height: 10px;
+    }
+  }
+
+  .menu {
+    &-list {
+      padding: 43px 0 29px 0;
+
+      &__item {
+        margin-right: 42px;
+      }
+
+      &__link {
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 119.9%;
+        text-align: center;
+        letter-spacing: 0.025em;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 661px;
+  }
+
+  .header {
+    &-container {
+      max-width: 628px;
+    }
+  }
+
+  .menu {
+    &-list {
+      padding: 44px 0 40px 0;
+
+      &__item {
+        margin-right: 22px;
+      }
+
+      &__link {
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 119.9%;
+        text-align: center;
+        letter-spacing: 0.025em;
+      }
+    }
+  }
+}
