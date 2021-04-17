@@ -439,7 +439,7 @@ label {
       background-image: url('../images/offer-bubbles-1.png');
       position: absolute;
       left: 0;
-      top: -65%;
+      bottom: -80px;
     }
     &::after {
       content: '';
@@ -448,7 +448,7 @@ label {
       background-image: url('../images/offer-bubbles-3.png');
       position: absolute;
       right: 0;
-      top: -72%;
+      bottom: -80px;
     }
   }
   &__content {
@@ -484,7 +484,119 @@ label {
   height: 100px;
   border: 1px solid #000;
 }
+// /offer
 
+// works
+.section {
+}
+.works {
+  padding: 100px 0 50px;
+  &__title {
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+  &__item {
+    position: relative;
+    /*should be the same height as the images*/
+    height: 290px;
+  }
+}
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+  vertical-align: middle;
+  width: 460px;
+  height: 290px;
+}
+
+.img-comp-slider {
+  position: absolute;
+  // position: relative;
+  z-index: 5;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 80px;
+  height: 80px;
+  // background-color: #E4D8CE;
+  // opacity: 0.7;
+  border-radius: 50%;
+  background: linear-gradient(219.31deg, rgba(255, 255, 255, 0.31) 15.65%, rgba(255, 255, 255, 0) 84.26%);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.1), inset 5px 5px 10px rgba(255, 255, 255, 0.1);
+  /* Note: backdrop-filter has minimal browser support */
+  backdrop-filter: blur(46px);
+  &::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('../images/svg/works-left-arrow.svg');
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('../images/svg/works-right-arrow.svg');
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+  }
+}
+
+
+
+
+
+// equipment
+.equipment {
+  padding: 75px 0;
+  &__title {
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    flex-basis: 30%;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  &__img img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__img-3 img {
+    width: 65%;
+    object-fit: cover;
+  }
+  &__text {
+    text-align: center;
+    font-weight: 400;
+    & span {
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+}
+// /equipment
 
 
 
