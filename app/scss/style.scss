@@ -591,6 +591,11 @@ label {
 //  faq
 .faq {
   padding: 50px 0;
+  &__wrapper {
+    padding: 50px 0 50px;
+    box-shadow: 0px 21px 72px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+  }
 }
 .accordion {
   width: 100%;
@@ -646,6 +651,76 @@ label {
   }
 }
 // /faq
+
+// contacts
+.contacts {
+  padding: 70px 0 70px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 30px;
+ }
+  &__link {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    color: #11325A;
+    text-decoration: none;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 35px;
+      background-image: url('../images/svg/phone.svg');
+      left: -33px;
+    }
+  }
+}
+// /contacts
+
+// footer
+.footer {
+  padding: 20px 0 15px;
+  background: rgba(125, 219, 254, 0.85);
+
+  &__text,
+  &__link-email {
+    margin-bottom: 35px;
+    font-weight: normal;
+    font-size: 20px;
+    color: #000;
+  }
+  &__link-email {
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+  }
+  &__link-instagram {
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+  &__confidential {
+    font-weight: 200;
+    font-size: 20px;
+    color: #000000;
+  }
+}
+// /footer
 
 
 
