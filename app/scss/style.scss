@@ -4,6 +4,7 @@
 @import 'global';
 
 
+// header
 .header {
   padding-top: 10px;
   padding-bottom: 11px;
@@ -97,8 +98,9 @@
     }
   }
 }
+// /header
 
-
+// mainpage
 .mainpage {
   &__title {
     margin-top: 0;
@@ -181,10 +183,6 @@
   }
 }
 
-.container {
-  max-width: 1034px;
-  margin: 0 auto;
-}
 
 label {
   &.invalid {
@@ -209,8 +207,9 @@ label {
     }
   }
 }
+// /mainpage
 
-
+// pricelist
 .pricelist {
   padding-bottom: 130px;
 
@@ -277,10 +276,12 @@ label {
 .gop {
   min-width: 85px;
 }
+// /pricelist
 
-
+// calculator
 .calculator {
-  &__conteiner {
+  &__container {
+    max-width: 960px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -362,6 +363,7 @@ label {
   }
 
   &__material {
+    box-sizing: border-box;
     font-style: normal;
     font-weight: 200;
     font-size: 16px;
@@ -385,7 +387,7 @@ label {
 
   &__requer {
     padding-top: 12px;
-    padding-bottom: 162px;
+    padding-bottom: 62px;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -409,6 +411,80 @@ label {
     text-align: center;
   }
 }
+// /calculator
+
+// offer
+.offer {
+  padding: 95px 0 60px;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: '';
+    width: 329px;
+    height: 242px;
+    background-image: url('../images/offer-bubbles-2.png');
+    position: absolute;
+    left: 50%;
+    bottom: -80px;
+    z-index: 1;
+  }
+  &__wrapper {
+    padding: 15px 0 10px;
+    background-color: #FF7400;
+    position: relative;
+    &::before {
+      content: '';
+      width: 485px;
+      height: 344px;
+      background-image: url('../images/offer-bubbles-1.png');
+      position: absolute;
+      left: 0;
+      top: -65%;
+    }
+    &::after {
+      content: '';
+      width: 471px;
+      height: 354px;
+      background-image: url('../images/offer-bubbles-3.png');
+      position: absolute;
+      right: 0;
+      top: -72%;
+    }
+  }
+  &__content {
+    max-width: 846px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-right: 50px;
+  }
+  &__title, 
+  &__text {
+    flex-basis: 50%;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+.container {
+}
+.box {
+  border: 1px solid #000;
+  width: 200px;
+  padding: 100px;
+}
+.inner {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
 
 
 
