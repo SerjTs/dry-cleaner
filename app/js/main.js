@@ -45,6 +45,34 @@ $(document).ready(function () {
   });
 
 
+  // Кнопка скроллинга вверх
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 500) {
+      $('.scrollup').fadeIn();
+    } else {
+      $('.scrollup').fadeOut();
+    }
+  });
+  $('.scrollup').on('click', function () {
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+    return false;
+  });
+
+
+  // smooth scroll
+  $(".menu-list__link, .link-btn").on("click", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+    //забираем идентификатор блока с атрибута href
+    var id = $(this).attr('href'),
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({ scrollTop: top }, 1000);
+  });
+
+
+
 
 });
 
@@ -128,3 +156,7 @@ function initComparisons() {
 };
 
 initComparisons();
+
+
+
+

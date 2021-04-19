@@ -33,7 +33,7 @@
           <div class="header-top__icon">
             <img src="images/svg/call-phone.svg" alt="Icon: call-phone" class="icon">
           </div>
-          <a href="tel:+7-952-282-85-36" class="header-top__phone-number">+7-952-282-85-36</a>
+          <a href="tel:+79522828536" class="header-top__phone-number">+7-952-282-85-36</a>
         </span>
       </div>
       <!-- /.header-top -->
@@ -45,30 +45,30 @@
       <nav class="menu">
         <ul class="menu-list">
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">ГЛАВНАЯ</a>
+            <a class="menu-list__link" href="#" class="menu-list__link">ГЛАВНАЯ</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">СТОИМОСТЬ</a>
+            <a class="menu-list__link" href="#pricelist" class="menu-list__link">СТОИМОСТЬ</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">ОБОРУДОВАНИЕ</a>
+            <a class="menu-list__link" href="#equipment" class="menu-list__link">ОБОРУДОВАНИЕ</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">НАШИ РАБОТЫ</a>
+            <a class="menu-list__link" href="#works" class="menu-list__link">НАШИ РАБОТЫ</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">ВОПРОСЫ</a>
+            <a class="menu-list__link" href="#faq" class="menu-list__link">ВОПРОСЫ</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">КОНТАКТЫ</a>
+            <a class="menu-list__link" href="#contacts" class="menu-list__link">КОНТАКТЫ</a>
           </li>
         </ul>
       </nav>
     </div>
   </div>
-
-  <!-- mainpage -->
-  <section class="mainpage">
+  <!-- 
+  <!-- ГЛАВНАЯ mainpage -->
+  <section class="mainpage" id="mainpage">
     <div class="container">
       <h1 class="mainpage__title title">ПРОФЕССИОНАЛЬНАЯ ХИМИЧЕСКАЯ ЧИСТКА МЕБЕЛИ</h1>
       <span class="mainpage__subtitle">Избавим от пыли, пятен и запахов текстильную и кожаную мебель</span>
@@ -96,8 +96,8 @@
   </section>
   <!-- /.mainpage -->
 
-  <!-- pricelist -->
-  <section class="pricelist">
+  <!-- СТОИМОСТЬ pricelist -->
+  <section class="pricelist" id="pricelist">
     <div class="container">
       <h2 class="pricelist__title title">ПРАЙС - ЛИСТ</h2>
 
@@ -572,7 +572,7 @@
               </div>
             </div>
           </div>
-          <button class="button calculator__btn">РАССЧИТАТЬ СТОИМОСТЬ</button>
+          <button class="button calculator__btn" data-remodal-target="modal">РАССЧИТАТЬ СТОИМОСТЬ</button>
         </div>
       </div>
       <span class="calculator__requer">МИНИМАЛЬНАЯ СУММА ЗАКАЗА 2500 р.</span>
@@ -595,8 +595,8 @@
   </section>
   <!-- / offer  -->
 
-  <!-- works -->
-  <section class="works">
+  <!-- НАШИ РАБОТЫ works -->
+  <section class="works" id="works">
     <div class="container-sm">
       <h2 class="works__title">
         НАШИ РАБОТЫ
@@ -662,8 +662,8 @@
   </section>
   <!-- / works -->
 
-  <!-- equipment -->
-  <section class="equipment">
+  <!-- ОБОРУДОВАНИЕ equipment -->
+  <section class="equipment" id="equipment">
     <div class="container">
       <h2 class="equipment__title">
         ЧЕМ МЫ ЧИСТИМ МЕБЕЛЬ?
@@ -700,8 +700,8 @@
   </section>
   <!-- / equipment -->
 
-  <!-- faq -->
-  <section class="faq">
+  <!-- ВОПРОСЫ faq -->
+  <section class="faq" id="faq">
     <div class="container-sm">
       <div class="faq__wrapper">
         <h2 class="faq__title">
@@ -796,8 +796,8 @@
   </section>
   <!-- faq -->
 
-  <!-- contacts -->
-  <section class="contacts">
+  <!-- КОНТАКТЫ contacts -->
+  <section class="contacts" id="contacts">
     <div class="container-sm">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">
@@ -833,11 +833,37 @@
   </footer>
   <!-- / footer -->
 
+  <!-- модальное окно -->
+  <div class="modal remodal" data-remodal-id="modal">
+    <div class="modal__card">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <h3 class="modal__card-title">ЗАКАЖИТЕ ЗВОНОК ПРЯМО СЕЙЧАС И ПОЛУЧИТЕ СКИДКУ<br>
+      </h3>
+      <p class="modal__card-closeout">15%</p>
+      <form action="Send.php" method="POST" class="modal__form">
+        <input type="text" class="modal__form-input" name="name" required minlength="3" placeholder="введите имя">
+        <input type="text" class="modal__form-input phone" name="phone" required minlength="16">
+        <button class="modal__form-button">ЗАКАЗАТЬ ЗВОНОК</button>
+      </form>
+    </div>
+  </div>
+<!-- -модальное окно -->
+
+<!-- Стрелка перемотки страницы вверх -->
+<a href="#" class="scrollup">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path
+      d="M0 3.795l2.995-2.98 11.132 11.185-11.132 11.186-2.995-2.981 8.167-8.205-8.167-8.205zm18.04 8.205l-8.167 8.205 2.995 2.98 11.132-11.185-11.132-11.186-2.995 2.98 8.167 8.206z" />
+  </svg>
+</a>
+<!-- / Стрелка перемотки страницы вверх -->
+
 
   <script src="js/jquery-3.6.0.min.js"></script>
   <!-- <script src="js/parallax.min.js"></script> -->
   <script src="js/jquery.mask.js"></script>
   <script src="js/jquery.validate.min.js"></script>
+  <script src="js/remodal.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
