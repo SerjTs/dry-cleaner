@@ -20,7 +20,9 @@
     <div class="container header-container">
       <div class="header-top">
 
-        <a href="index.html" class="header-top__logo">АСК</a>
+        <a href="index.html" class="header-top__logo">
+          <img src="images/svg/logo.svg" alt="Логотип АСК">
+        </a>
 
         <span class="header-top__map header-icon">
           <div class="header-top__icon">
@@ -45,16 +47,16 @@
       <nav class="menu">
         <ul class="menu-list">
           <li class="menu-list__item">
-            <a class="menu-list__link" href="#" class="menu-list__link">ГЛАВНАЯ</a>
-          </li>
-          <li class="menu-list__item">
             <a class="menu-list__link" href="#pricelist" class="menu-list__link">СТОИМОСТЬ</a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-list__link" href="#equipment" class="menu-list__link">ОБОРУДОВАНИЕ</a>
+            <a class="menu-list__link" href="#calc" class="menu-list__link">КАЛЬКУЛЯТОР</a>
           </li>
           <li class="menu-list__item">
             <a class="menu-list__link" href="#works" class="menu-list__link">НАШИ РАБОТЫ</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#equipment" class="menu-list__link">ОБОРУДОВАНИЕ</a>
           </li>
           <li class="menu-list__item">
             <a class="menu-list__link" href="#faq" class="menu-list__link">ВОПРОСЫ</a>
@@ -421,9 +423,8 @@
   </section>
   <!-- /.pricelist -->
 
-
   <!-- calculator -->
-  <section class="calculator">
+  <section class="calculator" id="calc">
     <div class="container calculator__container">
       <div class="calculator__card">
         <div class="calculator__contents">
@@ -433,37 +434,67 @@
 
               <span class="calculator__name calculator__name--couch">Диван</span>
               <div class="counter">
-                <button class="counter__button" id="buttonCountPlus"><img src="images/svg/plus.svg" alt=""></button>
-                <div id="buttonCountNumber">0</div>
-                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                    alt="кнопка минус"></button>
+                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                    alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <div class="calculator__form">
+                <!-- <div class="calculator__form">
                   <input class="calculator__material" placeholder="материал">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                </div> -->
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="options_calc">
+                    <div data-price="textile" class="active">Текстиль</div>
+                    <div data-price="leather">Кожа</div>
+                  </div>
                 </div>
-                <div class="calculator__form">
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">тип</div>
+                  <div class="options_calc">
+                    <div data-price="0" class="active">Обычный</div>
+                    <div data-price="100">Угловой</div>
+                    <div data-price="100">Кухонный</div>
+                  </div>
+                </div>
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">размер</div>
+                  <div class="options_calc">
+                    <div data-price="0" class="active">1 место</div>
+                    <div data-price="100">2 места</div>
+                    <div data-price="100">3 места</div>
+                  </div>
+                </div>
+
+                <!-- <div class="calculator__form">
                   <input class="calculator__material" placeholder="тип">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
                 </div>
                 <div class="calculator__form">
                   <input class="calculator__material" placeholder="размер">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
+                </div> -->
               </div>
             </div>
 
             <div class="calculator__info">
               <span class="calculator__name calculator__name--armchair">Кресло</span>
               <div class="counter">
-                <button class="counter__button" id="buttonCountPlus"><img src="images/svg/plus.svg" alt=""></button>
-                <div id="buttonCountNumber">0</div>
-                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                    alt="кнопка минус"></button>
+                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                    alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <div class="calculator__form">
+                <!-- <div class="calculator__form">
                   <input class="calculator__material" placeholder="материал">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
                 </div>
@@ -474,20 +505,48 @@
                 <div class="calculator__form">
                   <input class="calculator__material" placeholder="размер">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                </div> -->
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="options_calc">
+                    <div data-price="textile" class="active">Текстиль</div>
+                    <div data-price="leather">Кожа</div>
+                  </div>
                 </div>
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">тип</div>
+                  <div class="options_calc">
+                    <div data-price="0" class="active">Нераскладываемое кресло</div>
+                    <div data-price="100">Кресло-кровать</div>
+                    <div data-price="100">Офисное кресло</div>
+                  </div>
+                </div>
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">размер</div>
+                  <div class="options_calc">
+                    <div data-price="0" class="active">1 место</div>
+                    <div data-price="100">2 места</div>
+                    <div data-price="100">3 места</div>
+                  </div>
+                </div>
+
               </div>
             </div>
             <div class="calculator__info">
               <span class="calculator__name calculator__name--chair">Стул</span>
               <div class="counter">
-                <button class="counter__button" id="buttonCountPlus"><img src="images/svg/plus.svg" alt=""></button>
-                <div id="buttonCountNumber">0</div>
-                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
-
+                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                    alt="кнопка минус"></button>
+                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                    alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <div class="calculator__form">
+                <!-- <div class="calculator__form">
                   <input class="calculator__material" placeholder="материал">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
                 </div>
@@ -498,34 +557,72 @@
                 <div class="calculator__form">
                   <input class="calculator__material" placeholder="размер">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                </div> -->
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="options_calc">
+                    <div data-price="textile" class="active">Текстиль</div>
+                    <div data-price="leather">Кожа</div>
+                  </div>
                 </div>
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">тип</div>
+                  <div class="options_calc">
+                    <div data-price="0" class="active">Стул с мягкой спинкой</div>
+                    <div data-price="100">Стул без спинки</div>
+                    <div data-price="100">Пуф/банкетка</div>
+                  </div>
+                </div>
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">размер</div>
+                  <div class="options_calc">
+                    <div data-price="0" class="active">1 место</div>
+                    <div data-price="100">2 места</div>
+                    <div data-price="100">3 места</div>
+                  </div>
+                </div>
+
               </div>
             </div>
             <div class="calculator__info">
               <span class="calculator__name calculator__name--pouffe">Пуф</span>
               <div class="counter">
-                <button class="counter__button" id="buttonCountPlus"><img src="images/svg/plus.svg" alt=""></button>
-                <div id="buttonCountNumber">0</div>
-                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                    alt="кнопка минус"></button>
+                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                    alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <div class="calculator__form">
+                <!-- <div class="calculator__form">
                   <input class="calculator__material" placeholder="материал">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                </div> -->
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="options_calc">
+                    <div data-price="textile" class="active">Текстиль</div>
+                    <div data-price="leather">Кожа</div>
+                  </div>
                 </div>
+
               </div>
             </div>
             <div class="calculator__info calculator__info--mattress">
               <span class="calculator__name calculator__name--mattress">Матрас</span>
               <div class="counter">
-                <button class="counter__button" id="buttonCountPlus"><img src="images/svg/plus.svg" alt=""></button>
-                <div id="buttonCountNumber">0</div>
-                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                    alt="кнопка минус"></button>
+                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                    alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <div class="calculator__form">
+                <!-- <div class="calculator__form">
                   <input class="calculator__material" placeholder="материал">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
                 </div>
@@ -536,6 +633,31 @@
                 <div class="calculator__form">
                   <input class="calculator__material" placeholder="размер">
                   <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
+                </div> -->
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="options_calc">
+                    <div data-price="textile" class="active">Текстиль</div>
+                    <div data-price="leather">Кожа</div>
+                  </div>
+                </div>
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">тип</div>
+                  <div class="options_calc">
+                    <div data-price="0" class="active">с одной стороны</div>
+                    <div data-price="100">с двух сторон</div>
+                  </div>
+                </div>
+
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">размер</div>
+                  <div class="options_calc">
+                    <div data-price="0" class="active">70-90х200</div>
+                    <div data-price="100">91-140х200</div>
+                    <div data-price="100">141-180х200</div>
+                  </div>
                 </div>
 
               </div>
@@ -543,31 +665,40 @@
             <div class="calculator__info calculator__info--prelast">
               <span class="calculator__name ">Спальное место</span>
               <div class="counter">
-                <button class="counter__button" id="buttonCountPlus"><img src="images/svg/plus.svg" alt=""></button>
-                <div id="buttonCountNumber">0</div>
-                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                    alt="кнопка минус"></button>
+                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                    alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="материал">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
+<div class="calc">
+  <div class="r_calc calk_1" data-price="0">материал</div>
+  <div class="options_calc">
+    <div data-price="textile" class="active">Текстиль</div>
+    <div data-price="leather">Кожа</div>
+  </div>
+</div>
               </div>
             </div>
             <div class="calculator__info calculator__info--last">
               <span class="calculator__name ">Съемная подушка</span>
               <div class="counter">
-                <button class="counter__button" id="buttonCountPlus"><img src="images/svg/plus.svg" alt=""></button>
-                <div id="buttonCountNumber">0</div>
-                <button class="counter__button" id="buttonCountMinus"><img src="images/svg/minus.svg" alt=""></button>
+                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                    alt="кнопка минус"></button>
+                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                    alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="материал">
-                  <button class="calculator__arrow calculator-button "><img src="images/svg/arrow-down.svg"
-                      alt=""></button>
+                <div class="calc">
+                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="options_calc">
+                    <div data-price="textile" class="active">Текстиль</div>
+                    <div data-price="leather">Кожа</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -714,7 +845,28 @@
                 Сколько времени длится уборка?
               </h4>
               <p class="accordion__text">
-                Ответ
+                Зависит от объема работ и сложности пятен. В среднем от одного до двух часов.
+              </p>
+            </div>
+            <div class="accordion__item">
+              <h4 class="accordion__header">
+                Насколько часто нужно проводить чистку мебели?
+              </h4>
+              <p class="accordion__text">
+                Кроме случаев появления каких-либо пятен, рекомендовано чистить мебель около двух раз в год, в
+                зависимости от условий использования. Даже если мебель визуально выглядит чистой, нельзя забывать о
+                бытовой пыли, пылевых клещах,
+                бактериях и грибках, которые не видны человеческому взгляду, но могут быть причинами появления болезней
+                и аллергии.
+              </p>
+            </div>
+            <div class="accordion__item">
+              <h4 class="accordion__header">
+                Ваши чистящие средства безопасны для здоровья, детей и вызывают ли аллергию?
+              </h4>
+              <p class="accordion__text">
+                Все препараты гиппоалергенные, не наносят вреда людям, животным или окружающей среде, относятся к
+                премиум-классу качества, что подтверждается соответствующими сертификатами.
               </p>
             </div>
             <div class="accordion__item">
@@ -722,23 +874,11 @@
                 А вы не повредите мое имущество?
               </h4>
               <p class="accordion__text">
-                Ответ
-              </p>
-            </div>
-            <div class="accordion__item">
-              <h4 class="accordion__header">
-                Ваши чистящие средства безопасны для детей?
-              </h4>
-              <p class="accordion__text">
-                Ответ
-              </p>
-            </div>
-            <div class="accordion__item">
-              <h4 class="accordion__header">
-                Ваши чистящие средства вызывают аллергию?
-              </h4>
-              <p class="accordion__text">
-                Ответ
+                Мы тщательно подходим к выбору метода чистки и моющего средства в каждом случае, а также в обязательном
+                порядке
+                проверяем действие химического состава на незаметном участке. Так как мы используем профессиональное
+                оборудование и химию премиум-класса, а наши сотрудники имеют большой опыт, то вероятность порчи мебели
+                стремится к нулю.
               </p>
             </div>
             <div class="accordion__item">
@@ -746,7 +886,7 @@
                 Останется ли неприятный запах после чистящих средств?
               </h4>
               <p class="accordion__text">
-                Ответ
+                Нет. Все запахи выветриваются за пару часов после обработки.
               </p>
             </div>
             <div class="accordion__item">
@@ -754,39 +894,36 @@
                 Мне нужно сделать какую-нибудь подготовку для клининга?
               </h4>
               <p class="accordion__text">
-                Ответ
+                Уберите с мебели все лишнее, а также обеспечьте доступ к водопроводу, канализации и электричеству.
+                Больше ничего не надо. Все оборудование, расходные материалы и химию наши сотрудники привозят с собой.
               </p>
             </div>
             <div class="accordion__item">
               <h4 class="accordion__header">
-                От меня потребуется предоплата? Когда оплачивается клининг?
+                Правда ли, что после химчистки мебель станет совсем как новая&nbsp;– восстановится цвет, ворс и так
+                далее?
               </h4>
               <p class="accordion__text">
-                Ответ
+                Современная химчистка позволяет удалить все загрязнения, поднять примятый ворс, расправить заломы,
+                вернуть матовую
+                структуру залоснившимся участкам. Благодаря удалению грязи цвет изделия становится ярче, свежее,
+                приближается к
+                изначальному. Если диван не сильно изношен и не имеет механических повреждений, то после химчистки он
+                вернется в состояние близкое к новому изделию. Но мы не вернем выгоревший или выжженный хлоркой цвет и
+                не восстановим стертый ворс. То есть, изделие будет выглядеть более свежим, но явные следы износа не
+                исчезнут, просто станут менее заметными.
               </p>
             </div>
             <div class="accordion__item">
               <h4 class="accordion__header">
-                Мне нужно присутствовать во время уборки?
+                Что такое минимальный заказ?
               </h4>
               <p class="accordion__text">
-                Ответ
-              </p>
-            </div>
-            <div class="accordion__item">
-              <h4 class="accordion__header">
-                Какие способы оплаты доступны?
-              </h4>
-              <p class="accordion__text">
-                Ответ
-              </p>
-            </div>
-            <div class="accordion__item">
-              <h4 class="accordion__header">
-                Вы принимаете меры предосторожности для защиты от короновирусной инфекции?
-              </h4>
-              <p class="accordion__text">
-                Ответ
+                Это фиксированный нижний предел оплаты за весь заказ.<br>
+                Суммируются стоимости чистки каждой позиции и если эта сумма меньше суммы мин. заказа, то оплачивается
+                сумма мин.
+                заказа, если расчетная сумма выше – то по фактически рассчитанной сумме.
+
               </p>
             </div>
           </div>
@@ -814,21 +951,30 @@
   <!-- footer -->
   <footer class="footer">
     <div class="container">
-      <p class="footer__text">
-        Пишите по любым вопросам:
-        <a href="mailto:asc-cleaning@mail.ru" class="footer__link-email">
-          asc-cleaning@mail.ru
-        </a>
-      </p>
-      <p class="footer__text">
-        Мы в соцсетях:
-        <a href="https://instagram.com" class="footer__link-instagram" target="_blank">
-          <img src="images/svg/instagram.svg" alt="ссылка на инстаграм">
-        </a>
-      </p>
-      <p class="footer__confidential">
-        Публичная оферта / Политика конфиденциальности
-      </p>
+      <div class="footer__wrapper">
+        <div class="footer__content">
+          <p class="footer__text">
+            Пишите по любым вопросам:
+            <a href="mailto:asc-cleaning@mail.ru" class="footer__link-email">
+              asc-cleaning@mail.ru
+            </a>
+          </p>
+          <p class="footer__text">
+            Мы в соцсетях:
+            <a href="https://instagram.com" class="footer__link-instagram" target="_blank">
+              <img src="images/svg/instagram.svg" alt="ссылка на инстаграм">
+            </a>
+          </p>
+          <p class="footer__confidential">
+            Публичная оферта / Политика конфиденциальности
+          </p>
+        </div>
+        <div class="footer__logo">
+          <a href="index.html" class="header-top__logo">
+            <img src="images/svg/logo.svg" alt="Логотип АСК">
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
   <!-- / footer -->
@@ -847,16 +993,17 @@
       </form>
     </div>
   </div>
-<!-- -модальное окно -->
+  <!-- -модальное окно -->
 
-<!-- Стрелка перемотки страницы вверх -->
-<a href="#" class="scrollup">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path
-      d="M0 3.795l2.995-2.98 11.132 11.185-11.132 11.186-2.995-2.981 8.167-8.205-8.167-8.205zm18.04 8.205l-8.167 8.205 2.995 2.98 11.132-11.185-11.132-11.186-2.995 2.98 8.167 8.206z" />
-  </svg>
-</a>
-<!-- / Стрелка перемотки страницы вверх -->
+  <!-- Стрелка перемотки страницы вверх -->
+  <a href="#" class="scrollup">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path
+        d="M0 3.795l2.995-2.98 11.132 11.185-11.132 11.186-2.995-2.981 8.167-8.205-8.167-8.205zm18.04 8.205l-8.167 8.205 2.995 2.98 11.132-11.185-11.132-11.186-2.995 2.98 8.167 8.206z" />
+    </svg>
+  </a>
+  <!-- / Стрелка перемотки страницы вверх -->
+
 
 
   <script src="js/jquery-3.6.0.min.js"></script>
