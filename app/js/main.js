@@ -14,7 +14,7 @@ $(document).ready(function () {
       },
     });
   });
-  $('.phone').mask('+0(000)000-00-00', { placeholder: "телефон" });
+  $('.phone').mask('+0(000)000-00-00', { placeholder: "Введите телефон" });
 
 
   var count = 0;
@@ -78,6 +78,7 @@ $(document).ready(function () {
     let count = parseInt($input.val()) - 1;
     count = count < 0 ? 0 : count;
     $input.val(count);
+    ResultCalculator();
   });
   // Прибавляем кол-во по клику
   $('.counter #buttonCountPlus').click(function () {
@@ -86,6 +87,7 @@ $(document).ready(function () {
     count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
     $input.val(parseInt(count));
     // console.log($input.val());
+    ResultCalculator();
   });
   // Убираем все лишнее и невозможное при изменении поля
   $('.counter .quantity').bind("change keyup input click", function () {
@@ -98,68 +100,70 @@ $(document).ready(function () {
     if (this.value > parseInt($(this).data('max-count'))) {
       this.value = parseInt($(this).data('max-count'));
     }
+    ResultCalculator();
   });
 
   // Калькулятор
   function ResultCalculator(){
         result = 0;
-        
-        calk_1 = $(".calk_1").attr("data-price"); // толщина листа
-        
-        calk_2 = $(".calk_2").attr("data-price"); // высота забора
-        
-        calk_3 = $(".calk_3").attr("data-price"); // покрытие
-        
-        dlina = $(".calk_4").val(); // длина забора
-        dlina_1000 = parseInt(dlina) * 1000; // 1 м = 1000 руб
-        
-        calk_5 = $(".calk_5").attr("data-price"); // наличие ворот
-        
-        calk_6 = $(".calk_6").attr("data-price"); // наличие калиток
-        
-        lagi = $(".calk_7").attr("data-price"); // забор укрепления лагами
-        
-        calk_8 = $(".calk_8").attr("data-price"); // направление доставки
-        
-        calk_9 = $(".calk_9").val(); // количество километров от мкад
-        
-        
-        if(calk_1 == "0"){
-            calk_1_result = 0;
-        } else{
-            calk_1_result = 100;
+
+        // считаем диваны
+        calc_1 = $(".couch-calc_1").val(); // диван кол-во
+        calc_2 = $(".couch-calc_2").attr("data-price"); // диван материал
+        calc_3 = $(".couch-calc_3").attr("data-price"); // диван тип
+        calc_4 = $(".couch-calc_4").attr("data-price"); // диван размер
+        if (($(".couch-calc_3").text() == "Угловой" || $(".couch-calc_3").text() == "Кухонный") && (parseFloat(calc_4) > 2)){
+            couch = parseFloat(calc_1) * (parseFloat(calc_2) * parseFloat(calc_3) + (1000 + ((parseFloat(calc_4) - 2) * 500)));
+        } else {
+          couch = parseFloat(calc_1) * parseFloat(calc_2) * parseFloat(calc_3) * parseFloat(calc_4);
+        };
+
+        // считаем кресла
+        calc_1 = $(".armchair-calc_1").val(); // кресло кол-во
+        calc_2 = $(".armchair-calc_2").attr("data-price"); // кресло материал
+        calc_3 = $(".armchair-calc_3").attr("data-price"); // кресло тип
+        armchair = Math.round(parseFloat(calc_1) * parseFloat(calc_2) * parseFloat(calc_3));
+
+        // считаем стулья
+        calc_1 = $(".chair-calc_1").val(); // стул кол-во
+        calc_2 = $(".chair-calc_2").attr("data-price"); // стул материал
+        calc_3 = $(".chair-calc_3").attr("data-price"); // стул тип
+        if (($(".chair-calc_2").text() == "Кожа") && ($(".chair-calc_3").text() == "Стул с мягкой спинкой")){
+          calc_3 = 1.308;
         }
-        result += parseInt(dlina_1000) + ( parseInt(dlina) * parseInt(calk_1_result) );
-        
-        if(lagi == "0"){
-            lagi_result = 0;
-        } else{
-            lagi_result = lagi;
-        }
-        
-        result += parseInt(dlina) * parseInt(lagi_result);
-        
-        
-        if(calk_2 == "0"){
-            calk_2_result = 0;
-        } else{
-            calk_2_result = calk_2;
-        }
-        
-        result += dlina * calk_2_result;
-        
-        
-        if(calk_3 == "0"){
-            calk_3_result = 0;
-        } else{
-            calk_3_result = calk_3;
-        }
-        
-        result += dlina * calk_3_result + parseInt(calk_5) + parseInt(calk_6);
-        
-        result += parseInt(calk_8) * parseInt(calk_9);
-        
-        $(".result_calculator span").text(result); // ВСЕГО
+        chair = Math.round(parseFloat(calc_1) * parseFloat(calc_2) * parseFloat(calc_3));
+
+        // считаем пуфы
+        calc_1 = $(".pouffe-calc_1").val(); // пуф кол-во
+        calc_2 = $(".pouffe-calc_2").attr("data-price"); // пуф материал
+        pouffe = parseFloat(calc_1) * parseFloat(calc_2);
+
+        // считаем матрасы
+        calc_1 = $(".mattress-calc_1").val(); // матрас кол-во
+        calc_2 = $(".mattress-calc_2").attr("data-price"); // матрас тип
+        calc_3 = $(".mattress-calc_3").attr("data-price"); // матрас размер
+        if ($(".mattress-calc_2").text() == "с двух сторон"){
+          if ($(".mattress-calc_3").text() == "91-140х200") {
+            calc_3 = 1.2;
+          } else if ($(".mattress-calc_3").text() == "141-180х200"){
+            calc_3 = 1.5333;
+          }
+        };
+        mattress = Math.round(parseFloat(calc_1) * parseFloat(calc_2) * parseFloat(calc_3));
+
+        // считаем спальные места
+        calc_1 = $(".prelast-calc_1").val(); // спальное место кол-во
+        calc_2 = $(".prelast-calc_2").attr("data-price"); // спальное место материал
+        prelast = parseFloat(calc_1) * parseFloat(calc_2);
+
+        // считаем подушки
+        calc_1 = $(".pillow-calc_1").val(); // съемная подушка кол-во
+        calc_2 = $(".pillow-calc_2").attr("data-price"); // съемная подушка материал
+        pillow = parseFloat(calc_1) * parseFloat(calc_2);
+
+        // ВСЕГО
+        result = couch + armchair + chair + pouffe + mattress + prelast + pillow;
+        $(".result_calculator span").text(result); // Выводим ВСЕГО
     }
     
     $(".r_calc").click(function(){
@@ -232,6 +236,13 @@ $(document).ready(function () {
         })
     })
     // /Калькулятор
+
+  // кнопка вызова меню
+  $('.header-top__menu-btn').on('click', function () {
+    $('.menu').slideToggle();
+    // $('.menu__list').toggleClass('menu__list--mobile-visible');
+  })
+  // /кнопка вызова меню
 
 
 });

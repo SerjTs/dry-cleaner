@@ -37,11 +37,16 @@
           </div>
           <a href="tel:+79522828536" class="header-top__phone-number">+7-952-282-85-36</a>
         </span>
+
+        <button class="header-top__menu-btn">
+          <img src="images/svg/burger.svg" alt="бургер-меню">
+        </button>
       </div>
-      <!-- /.header-top -->
     </div>
-    <!-- /.container header-container -->
   </header>
+  <!-- /header -->
+
+  <!-- header-bottom -->
   <div class="header-bottom">
     <div class="container">
       <nav class="menu">
@@ -68,10 +73,17 @@
       </nav>
     </div>
   </div>
-  <!-- 
+  <!-- /header-bottom -->
+
   <!-- ГЛАВНАЯ mainpage -->
   <section class="mainpage" id="mainpage">
     <div class="container">
+      <div class="mainpage__city">
+        <div class="mainpage__city-icon">
+          <img src="images/svg/map-pin.svg" alt="Icon: map-pin" class="icon-map">
+        </div>
+        <span class="mainpage__city-text">Санкт - Петербург</span>
+      </div>
       <h1 class="mainpage__title title">ПРОФЕССИОНАЛЬНАЯ ХИМИЧЕСКАЯ ЧИСТКА МЕБЕЛИ</h1>
       <span class="mainpage__subtitle">Избавим от пыли, пятен и запахов текстильную и кожаную мебель</span>
       <div class="mainpage-info">
@@ -81,10 +93,10 @@
           </span>
           <form action="Send.php" method="POST" class="form bell">
             <div class="mainpage-input__group">
-              <input type="text" class="input bell-input" name="name" required minlength="3" placeholder="имя">
+              <input type="text" class="input bell-input" name="name" required minlength="3" placeholder="Введите имя">
             </div>
             <div class="mainpage-input__group">
-              <input type="text" class="input bell-input phone" name="phone" required minlength="16">
+              <input type="text" class="input bell-input phone" name="phone" required minlength="16" placeholder="Введите телефон">
             </div>
             <button class="button bell-button">ЗАКАЗАТЬ ЗВОНОК</button>
           </form>
@@ -94,9 +106,8 @@
         </div>
       </div>
     </div>
-    <!-- /.container -->
   </section>
-  <!-- /.mainpage -->
+  <!-- /mainpage -->
 
   <!-- СТОИМОСТЬ pricelist -->
   <section class="pricelist" id="pricelist">
@@ -112,21 +123,6 @@
                 <img src="images/divan96.png" alt="Icon:divan">
               </div>
             </th>
-            <td class="table__subtitle">1 сидячее место
-              <span class="table-dop">За каждые 50 см длины </span>
-            </td>
-            <td></td>
-            <td class="gop"></td>
-            <td class="table__text">Текстиль</td>
-            <td></td>
-            <td class="table__text">от 500 р</td>
-            <td class="table__aside"></td>
-            <td class="table__text">Кожа</td>
-            <td class="table__aside"></td>
-            <td class="table__text">от 650 р</td>
-          </tr>
-          <tr>
-            <td></td>
             <td class="table__subtitle">2 сидячих места
               <span class="table-dop">До 100 см в длину (не раскладывая)</span>
             </td>
@@ -186,7 +182,7 @@
               </div>
             </td>
             <td class="table__subtitle">Угловой диван
-              <span class="table-dop table__superfluous">не раскладывая</span>
+              <span class="table-dop table__superfluous"></span>
             </td>
             <td></td>
             <td></td>
@@ -420,11 +416,11 @@
         </tbody>
       </table>
     </div>
-  </section>
-  <!-- /.pricelist -->
+  </section> -->
+  <!-- /pricelist -->
 
   <!-- calculator -->
-  <section class="calculator" id="calc">
+  <!-- <section class="calculator" id="calc">
     <div class="container calculator__container">
       <div class="calculator__card">
         <div class="calculator__contents">
@@ -436,51 +432,42 @@
               <div class="counter">
                 <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
                     alt="кнопка минус"></button>
-                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <input type="text" value="0" size="2" class="quantity couch-calc_1" data-max-count="20" />
                 <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
                     alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
+
               <div class="calculator__resource">
-                <!-- <div class="calculator__form">
-                  <input class="calculator__material" placeholder="материал">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div> -->
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="r_calc couch-calc_2" data-price="0">материал</div>
                   <div class="options_calc">
-                    <div data-price="textile" class="active">Текстиль</div>
-                    <div data-price="leather">Кожа</div>
+                    <div data-price="500" class="active">Текстиль</div>
+                    <div data-price="650">Кожа</div>
                   </div>
                 </div>
 
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">тип</div>
+                  <div class="r_calc couch-calc_3" data-price="0">тип</div>
                   <div class="options_calc">
-                    <div data-price="0" class="active">Обычный</div>
-                    <div data-price="100">Угловой</div>
-                    <div data-price="100">Кухонный</div>
+                    <div data-price="1" class="active">Обычный</div>
+                    <div data-price="2">Угловой</div>
+                    <div data-price="2">Кухонный</div>
                   </div>
                 </div>
 
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">размер</div>
+                  <div class="r_calc couch-calc_4" data-price="0">размер</div>
                   <div class="options_calc">
-                    <div data-price="0" class="active">1 место</div>
-                    <div data-price="100">2 места</div>
-                    <div data-price="100">3 места</div>
+                    <div data-price="2" class="active">2 места</div>
+                    <div data-price="3">3 места</div>
+                    <div data-price="4">4 места</div>
+                    <div data-price="5">5 мест</div>
+                    <div data-price="6">6 мест</div>
                   </div>
                 </div>
-
-                <!-- <div class="calculator__form">
-                  <input class="calculator__material" placeholder="тип">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="размер">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div> -->
               </div>
+
             </div>
 
             <div class="calculator__info">
@@ -488,48 +475,27 @@
               <div class="counter">
                 <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
                     alt="кнопка минус"></button>
-                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <input type="text" value="0" size="2" class="quantity armchair-calc_1" data-max-count="20" />
                 <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
                     alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <!-- <div class="calculator__form">
-                  <input class="calculator__material" placeholder="материал">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="тип">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="размер">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div> -->
 
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="r_calc armchair-calc_2" data-price="0">материал</div>
                   <div class="options_calc">
-                    <div data-price="textile" class="active">Текстиль</div>
-                    <div data-price="leather">Кожа</div>
+                    <div data-price="500" class="active">Текстиль</div>
+                    <div data-price="650">Кожа</div>
                   </div>
                 </div>
 
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">тип</div>
+                  <div class="r_calc armchair-calc_3" data-price="0">тип</div>
                   <div class="options_calc">
-                    <div data-price="0" class="active">Нераскладываемое кресло</div>
-                    <div data-price="100">Кресло-кровать</div>
-                    <div data-price="100">Офисное кресло</div>
-                  </div>
-                </div>
-
-                <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">размер</div>
-                  <div class="options_calc">
-                    <div data-price="0" class="active">1 место</div>
-                    <div data-price="100">2 места</div>
-                    <div data-price="100">3 места</div>
+                    <div data-price="1.4" class="active">Нераскладываемое кресло</div>
+                    <div data-price="2">Кресло-кровать</div>
+                    <div data-price="1">Офисное кресло</div>
                   </div>
                 </div>
 
@@ -540,47 +506,25 @@
               <div class="counter">
                 <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
                     alt="кнопка минус"></button>
-                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <input type="text" value="0" size="2" class="quantity chair-calc_1" data-max-count="20" />
                 <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
                     alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <!-- <div class="calculator__form">
-                  <input class="calculator__material" placeholder="материал">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="тип">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="размер">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div> -->
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="r_calc chair-calc_2" data-price="0">материал</div>
                   <div class="options_calc">
-                    <div data-price="textile" class="active">Текстиль</div>
-                    <div data-price="leather">Кожа</div>
+                    <div data-price="500" class="active">Текстиль</div>
+                    <div data-price="650">Кожа</div>
                   </div>
                 </div>
 
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">тип</div>
+                  <div class="r_calc chair-calc_3" data-price="0">тип</div>
                   <div class="options_calc">
-                    <div data-price="0" class="active">Стул с мягкой спинкой</div>
-                    <div data-price="100">Стул без спинки</div>
-                    <div data-price="100">Пуф/банкетка</div>
-                  </div>
-                </div>
-
-                <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">размер</div>
-                  <div class="options_calc">
-                    <div data-price="0" class="active">1 место</div>
-                    <div data-price="100">2 места</div>
-                    <div data-price="100">3 места</div>
+                    <div data-price="1.4" class="active">Стул с мягкой спинкой</div>
+                    <div data-price="1">Стул без спинки</div>
                   </div>
                 </div>
 
@@ -591,21 +535,17 @@
               <div class="counter">
                 <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
                     alt="кнопка минус"></button>
-                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <input type="text" value="0" size="2" class="quantity pouffe-calc_1" data-max-count="20" />
                 <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
                     alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <!-- <div class="calculator__form">
-                  <input class="calculator__material" placeholder="материал">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div> -->
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="r_calc pouffe-calc_2" data-price="0">материал</div>
                   <div class="options_calc">
-                    <div data-price="textile" class="active">Текстиль</div>
-                    <div data-price="leather">Кожа</div>
+                    <div data-price="400" class="active">Текстиль</div>
+                    <div data-price="600">Кожа</div>
                   </div>
                 </div>
 
@@ -616,47 +556,27 @@
               <div class="counter">
                 <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
                     alt="кнопка минус"></button>
-                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <input type="text" value="0" size="2" class="quantity mattress-calc_1" data-max-count="20" />
                 <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
                     alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
-                <!-- <div class="calculator__form">
-                  <input class="calculator__material" placeholder="материал">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="тип">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div>
-                <div class="calculator__form">
-                  <input class="calculator__material" placeholder="размер">
-                  <button class="calculator__arrow"><img src="images/svg/arrow-down.svg" alt=""></button>
-                </div> -->
 
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="r_calc mattress-calc_2" data-price="0">тип</div>
                   <div class="options_calc">
-                    <div data-price="textile" class="active">Текстиль</div>
-                    <div data-price="leather">Кожа</div>
+                    <div data-price="1000" class="active">с одной стороны</div>
+                    <div data-price="1500">с двух сторон</div>
                   </div>
                 </div>
 
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">тип</div>
+                  <div class="r_calc mattress-calc_3" data-price="0">размер</div>
                   <div class="options_calc">
-                    <div data-price="0" class="active">с одной стороны</div>
-                    <div data-price="100">с двух сторон</div>
-                  </div>
-                </div>
-
-                <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">размер</div>
-                  <div class="options_calc">
-                    <div data-price="0" class="active">70-90х200</div>
-                    <div data-price="100">91-140х200</div>
-                    <div data-price="100">141-180х200</div>
+                    <div data-price="1" class="active">70-90х200</div>
+                    <div data-price="1.5">91-140х200</div>
+                    <div data-price="1.8">141-180х200</div>
                   </div>
                 </div>
 
@@ -667,67 +587,71 @@
               <div class="counter">
                 <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
                     alt="кнопка минус"></button>
-                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
-                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
-                    alt="кнопка плюс"></button>
-                <input type="hidden" value="1" id="num" name="num">
-              </div>
-              <div class="calculator__resource">
-<div class="calc">
-  <div class="r_calc calk_1" data-price="0">материал</div>
-  <div class="options_calc">
-    <div data-price="textile" class="active">Текстиль</div>
-    <div data-price="leather">Кожа</div>
-  </div>
-</div>
-              </div>
-            </div>
-            <div class="calculator__info calculator__info--last">
-              <span class="calculator__name ">Съемная подушка</span>
-              <div class="counter">
-                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
-                    alt="кнопка минус"></button>
-                <input type="text" value="0" size="2" class="quantity" data-max-count="20" />
+                <input type="text" value="0" size="2" class="quantity prelast-calc_1" data-max-count="20" />
                 <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
                     alt="кнопка плюс"></button>
                 <input type="hidden" value="1" id="num" name="num">
               </div>
               <div class="calculator__resource">
                 <div class="calc">
-                  <div class="r_calc calk_1" data-price="0">материал</div>
+                  <div class="r_calc prelast-calc_2" data-price="0">материал</div>
                   <div class="options_calc">
-                    <div data-price="textile" class="active">Текстиль</div>
-                    <div data-price="leather">Кожа</div>
+                    <div data-price="500" class="active">Текстиль</div>
+                    <div data-price="700">Кожа</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calculator__info calculator__info--pillow">
+              <span class="calculator__name ">Съемная подушка</span>
+              <div class="counter">
+                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                    alt="кнопка минус"></button>
+                <input type="text" value="0" size="2" class="quantity pillow-calc_1" data-max-count="20" />
+                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                    alt="кнопка плюс"></button>
+                <input type="hidden" value="1" id="num" name="num">
+              </div>
+              <div class="calculator__resource">
+                <div class="calc">
+                  <div class="r_calc pillow-calc_2" data-price="0">материал</div>
+                  <div class="options_calc">
+                    <div data-price="100" class="active">Текстиль</div>
+                    <div data-price="150">Кожа</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <button class="button calculator__btn" data-remodal-target="modal">РАССЧИТАТЬ СТОИМОСТЬ</button>
+          <div class="result_calculator">Стоимость: <span> 0 </span> руб.</div>
         </div>
       </div>
       <span class="calculator__requer">МИНИМАЛЬНАЯ СУММА ЗАКАЗА 2500 р.</span>
+      <p class="calculator__note">* расчет является предварительным</p>
     </div>
-  </section>
+  </section> -->
   <!-- / calculator -->
 
   <!-- offer -->
-  <section class="offer">
+  <!-- <section class="offer">
     <div class="offer__wrapper">
       <div class="offer__content">
         <h2 class="offer__title">
           АКЦИЯ! ПРИВЕДИТЕ ДРУГА И ПОЛУЧИТЕ 500 Р НА ХИМЧИСТКУ
         </h2>
+
         <p class="offer__text">
-          Подробности по телефону: <br> +7-952-282-85-36
+          Подробности по телефону:
+          <a href="tel:+79522828536" class="offer__link"> +7-952-282-85-36 </a>
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- / offer  -->
 
   <!-- НАШИ РАБОТЫ works -->
-  <section class="works" id="works">
+  <!-- <section class="works" id="works">
     <div class="container-sm">
       <h2 class="works__title">
         НАШИ РАБОТЫ
@@ -790,11 +714,11 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- / works -->
 
   <!-- ОБОРУДОВАНИЕ equipment -->
-  <section class="equipment" id="equipment">
+  <!-- <section class="equipment" id="equipment">
     <div class="container">
       <h2 class="equipment__title">
         ЧЕМ МЫ ЧИСТИМ МЕБЕЛЬ?
@@ -828,11 +752,11 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- / equipment -->
 
   <!-- ВОПРОСЫ faq -->
-  <section class="faq" id="faq">
+  <!-- <section class="faq" id="faq">
     <div class="container-sm">
       <div class="faq__wrapper">
         <h2 class="faq__title">
@@ -930,11 +854,11 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- faq -->
 
   <!-- КОНТАКТЫ contacts -->
-  <section class="contacts" id="contacts">
+  <!-- <section class="contacts" id="contacts">
     <div class="container-sm">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">
@@ -945,11 +869,11 @@
         </a>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- / contacts -->
 
   <!-- footer -->
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__content">
@@ -976,7 +900,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
   <!-- / footer -->
 
   <!-- модальное окно -->
@@ -987,8 +911,9 @@
       </h3>
       <p class="modal__card-closeout">15%</p>
       <form action="Send.php" method="POST" class="modal__form">
-        <input type="text" class="modal__form-input" name="name" required minlength="3" placeholder="введите имя">
-        <input type="text" class="modal__form-input phone" name="phone" required minlength="16">
+        <input type="text" class="modal__form-input" name="name" required minlength="3" placeholder="Введите имя">
+        <input type="text" class="modal__form-input phone" name="phone" required minlength="16"
+          placeholder="Введите телефон">
         <button class="modal__form-button">ЗАКАЗАТЬ ЗВОНОК</button>
       </form>
     </div>
