@@ -746,7 +746,7 @@ label {
 
 // equipment
 .equipment {
-  padding: 75px 0;
+  padding: 75px 0 50px;
 
   &__title {}
 
@@ -771,11 +771,6 @@ label {
     object-fit: cover;
   }
 
-  // &__img-3 img {
-  //   width: 65%;
-  //   object-fit: cover;
-  // }
-
   &__text {
     text-align: center;
     font-weight: 400;
@@ -786,15 +781,18 @@ label {
     }
   }
 }
-
 // /equipment
 
 //  faq
 .faq {
-  padding: 50px 0;
+  padding: 30px 0 50px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
 
   &__wrapper {
-    padding: 50px 0 50px;
+    padding: 40px 0 40px;
     box-shadow: 0px 21px 72px -10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
   }
@@ -818,7 +816,7 @@ label {
     font-family: Montserrat;
     font-weight: normal;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.25;
     color: #11325A;
 
     &::before {
@@ -856,6 +854,7 @@ label {
   }
 
   &__text {
+    line-height: 1.25;
     padding: 0 0 5px 50px;
     display: none;
   }

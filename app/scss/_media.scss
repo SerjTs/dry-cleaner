@@ -371,24 +371,61 @@
 
 
   }
+
   // /works 1024
 
   // equipment 1024
-    .equipment {
-      &__title {
-        margin-bottom: 30px;
-      }
-      &__img {
-        height: 200px;
-      }
-      &__text {
-        font-size: 12px;
-        line-height: 1.35;
-      }
+  .equipment {
+    padding: 75px 0 30px;
+
+    &__title {
+      margin-bottom: 30px;
     }
+
+    &__img {
+      height: 200px;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 1.35;
+    }
+  }
+
   // /equipment 1024
 
+  // faq 1024
+  .faq {
+    padding: 0 0 20px;
+  }
+  .accordion {
+
+    &__header {
+      font-size: 12px;
+      padding: 0px 20px 0px 35px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      &::before {
+        font-size: 20px;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        top: -1px;
+      }
+
+    }
+
+    &__text {
+      font-size: 12px;
+      padding: 0 0 5px 35px;
+    }
+  }
+
+  // /faq 1024
+
 }
+
 // /@media (max-width: 1024px)
 
 // @media (max-width: 768px)
@@ -600,6 +637,7 @@
       font-size: 13px;
     }
   }
+
   // works 768
   .works {
     padding: 0;
@@ -620,30 +658,33 @@
       width: 215px;
     }
   }
+
   // /works 768
 
   // equipment 768
   .equipment {
+    padding-bottom: 10px;
     &__item {
       flex-basis: 32%;
     }
   }
 
   // /equipment 768
-
 }
 
 // /@media (max-width: 768px)
 
 // @media (max-width: 600px)
 @media (max-width: 600px) {
-    h2,
-    .title {
-      font-size: 14px;
-    }
-    h3 {
-      font-size: 14px;
-    }
+
+  h2,
+  .title {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
 
 
   .card-image.image--desktop {
@@ -763,11 +804,13 @@
       color: #11325a;
     }
   }
+
   // /offer 600px
 
   // equipment 600
   .equipment {
-    padding: 50px 0;
+    padding: 50px 0 0;
+
     &__title {
       margin-bottom: 20px;
     }
@@ -782,11 +825,15 @@
       // padding: 10px 0;
     }
 
+    &__item-1 {
+      margin-bottom: -13px;
+    }
+
     &__img {
       // flex-basis: 50%;
       // margin-right: 20px;
       box-sizing: border-box;
-      padding: 10px;
+      padding: 5px;
       height: 130px;
       // width: 170px;
       // border: 1px solid red;
@@ -809,15 +856,29 @@
 
   // /equipment 600
 
+  // faq 600
+    .faq {
+      &__wrapper {
+        padding-top: 20px;
+      }
+      &__title {
+        margin-bottom: 20px;
+      }
+    }
+   
+  // /faq 600
+
+
 }
 
 // /@media (max-width: 600px)
 
 // @media (max-width: 510px)
 @media (max-width: 510px) {
+
   // works 510
   .works {
-    
+
     &__wrapper {
       display: inline-grid;
       grid-template-columns: 1fr;
@@ -832,8 +893,10 @@
       width: 280px;
     }
   }
+
   // /works 510
 }
+
 // /@media (max-width: 510px)
 
 // @media (max-width: 400px)
