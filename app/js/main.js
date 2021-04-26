@@ -242,6 +242,9 @@ $(document).ready(function () {
     $('.menu').slideToggle();
     // $('.menu__list').toggleClass('menu__list--mobile-visible');
   })
+  $('.menu-list__link').on('click', function () {
+    $('.menu').slideUp();
+  })
   // /кнопка вызова меню
 
 

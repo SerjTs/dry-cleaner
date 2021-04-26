@@ -8,6 +8,11 @@
     font-size: 18px;
   }
 
+  .button {
+    font-size: 13px;
+    padding: 15px 12px;
+  }
+
   .header {
     &-container {
       max-width: 692px;
@@ -73,16 +78,16 @@
   }
 
   .mainpage {
-   &__title {
-     font-size: 20px;
-     line-height: 1.25;
-     margin-bottom: 8px;
-   }
+    &__title {
+      font-size: 20px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
 
-   &__subtitle {
-     font-size: 14px;
-     margin-bottom: 25px;
-   }
+    &__subtitle {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
 
   }
 
@@ -208,37 +213,48 @@
     &__contents {
       padding: 35px 50px;
     }
+
     &__name {
       font-size: 12px;
       width: 64px;
     }
+
     &__info {
       margin-bottom: 0;
     }
+
     &__resource {
       padding-top: 10px;
     }
+
     .counter {
-      width: 60px;
+      // width: 60px;
+      width: unset;
       margin-right: 15px;
     }
+
     .counter .quantity {
       width: 20px;
       font-size: 14px;
     }
+
     .counter__button {
       width: 20px;
       height: 20px;
+
       &.bt_plus img {
         width: 10px;
       }
+
       &.bt_minus img {
         width: 8px;
       }
     }
+
     .calc {
       margin-right: 15px;
     }
+
     .r_calc,
     .options_calc,
     .options_calc div {
@@ -246,27 +262,123 @@
       font-size: 12px;
       line-height: 1.25;
     }
+
     .r_calc {
       margin-top: 11px;
       padding: 3px 17px 3px 10px;
       background-size: 7px 8px;
       background-position: right 10px center;
     }
+
     .options_calc {
       top: 33px;
     }
+
     .options_calc div {
       padding: 3px 1px;
     }
+
+    &__btn {
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+    &__btn-discount {
+      padding: 10px 36px;
+      max-width: 160px;
+    }
   }
-  .button {
-    font-size: 13px;
-    padding: 15px 12px;
-  } 
+
+  // offer 1024px
+  .offer {
+
+    &::before {
+      // пузырики
+      width: 612px;
+      height: 196px;
+      bottom: 28px;
+    }
+
+    &__wrapper {
+      padding: 0 135px;
+      height: 92px;
+
+      &::before {
+        // левая пена
+        width: 246px;
+        height: 107px;
+        left: -80px;
+      }
+
+      &::after {
+        // правая пена
+        width: 243px;
+        height: 107px;
+        right: -80px;
+      }
+    }
+
+    &__title,
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  // offer 1024px
+
+  // works 1024
+  .works {
+    padding: 20px 0;
+
+    &__wrapper-box {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__wrapper {
+      display: inline-grid;
+      // grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+      column-gap: 50px;
+    }
+
+    &__item,
+    .img-comp-img img {
+      height: 168px;
+      width: 305px;
+    }
+
+    .img-comp-slider {
+      width: 32px;
+      height: 32px;
+
+      &::before {
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 2px;
+      }
+
+      &::after {
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2px;
+      }
+    }
+
+
+  }
+  // /works 1024
+
+
 }
 
+// /@media (max-width: 1024px)
 
-
+// @media (max-width: 768px)
 @media (max-width: 768px) {
   .container {
     max-width: 661px;
@@ -397,14 +509,21 @@
     &__card {
       width: 100%;
     }
+
     &__contents {
       // padding: 35px 10%;
     }
+
     &__info {
       flex-wrap: wrap;
     }
+
     &__name {
       flex-grow: 1;
+    }
+
+    &__units {
+      width: 100%;
     }
 
     &__resource {
@@ -431,18 +550,78 @@
       margin: 0 2.7%;
     }
   }
+
+  .offer {
+    padding: 55px 0 60px;
+
+    &::before {
+      // пузырики
+      width: 413px;
+      height: 130px;
+      bottom: 40px;
+    }
+
+    &__wrapper {
+      padding: 0 115px;
+      height: 61px;
+      // background-color: #FF7400;
+
+      &::before {
+        // левая пена
+        width: 167px;
+        height: 71px;
+        left: -50px;
+      }
+
+      &::after {
+        // правая пена
+        width: 180px;
+        height: 71px;
+        right: -50px;
+      }
+    }
+
+    &__title,
+    &__text {
+      font-size: 13px;
+    }
+  }
+  // works 768
+  .works {
+    padding: 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__wrapper {
+      row-gap: 30px;
+      column-gap: 35px;
+    }
+
+    &__item,
+    .img-comp-img img {
+      // /*should be the same height as the images*/
+      height: 118px;
+      width: 215px;
+    }
+  }
+  // /works 768
+
 }
 
+// /@media (max-width: 768px)
 
+// @media (max-width: 600px)
 @media (max-width: 600px) {
 
-.card-image.image--desktop {
-  display: none;
-}
+  .card-image.image--desktop {
+    display: none;
+  }
 
-.card-image.image--phone {
-  display: block;
-}
+  .card-image.image--phone {
+    display: block;
+  }
 
   .pricelist__title {
     padding-bottom: 0;
@@ -506,16 +685,83 @@
     }
   }
 
+  // offer 600px
+  .offer {
+    padding: 55px 0 90px;
 
-  
+    &::before {
+      // пузырики
+      background-image: none;
+    }
+
+    &__wrapper {
+      padding: 5px 70px 5px;
+      height: 61px;
+
+      &::before {
+        // левая пена
+        left: -80px;
+      }
+
+      &::after {
+        // правая пена
+        height: 74px;
+        right: -88px;
+      }
+    }
+
+    &__content {
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    &__text {
+      position: absolute;
+      top: 80px;
+    }
+
+    &__text,
+    &__link {
+      color: #11325a;
+    }
+  }
+  // /offer 600px
+
 }
 
+// /@media (max-width: 600px)
+
+// @media (max-width: 510px)
+@media (max-width: 510px) {
+  // works 510
+  .works {
+    
+    &__wrapper {
+      display: inline-grid;
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+      column-gap: 35px;
+    }
+
+    &__item,
+    .img-comp-img img {
+      // /*should be the same height as the images*/
+      height: 153px;
+      width: 280px;
+    }
+  }
+  // /works 510
+}
+// /@media (max-width: 510px)
+
+// @media (max-width: 400px)
 @media (max-width: 400px) {
   .mainpage {
     &__title {
       font-size: 16px;
     }
-  }  
+  }
 
   .table {
     &__row-left-col {
@@ -523,16 +769,16 @@
     }
   }
 
-    .calculator {
-      &__contents {
-        padding: 35px 5%;
-      }
-
-      .r_calc,
-      .options_calc,
-      .options_calc div {
-        font-size: 10px;
-      }
+  .calculator {
+    &__contents {
+      padding: 35px 5%;
     }
+
+    .r_calc,
+    .options_calc,
+    .options_calc div {
+      font-size: 10px;
+    }
+  }
 
 }

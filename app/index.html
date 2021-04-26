@@ -411,14 +411,16 @@
           <div class="calculator__information">
             <div class="calculator__info">
 
-              <span class="calculator__name calculator__name--couch">Диван</span>
-              <div class="counter">
-                <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
-                    alt="кнопка минус"></button>
-                <input type="text" value="0" size="2" class="quantity couch-calc_1" data-max-count="20" />
-                <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
-                    alt="кнопка плюс"></button>
-                <input type="hidden" value="1" id="num" name="num">
+              <div class="calculator__units">
+                <span class="calculator__name calculator__name--couch">Диван</span>
+                <div class="counter">
+                  <button class="counter__button bt_minus" id="buttonCountMinus"><img src="images/svg/minus.svg"
+                      alt="кнопка минус"></button>
+                  <input type="text" value="0" size="2" class="quantity couch-calc_1" data-max-count="20" />
+                  <button class="counter__button bt_plus" id="buttonCountPlus"><img src="images/svg/plus.svg"
+                      alt="кнопка плюс"></button>
+                  <input type="hidden" value="1" id="num" name="num">
+                </div>
               </div>
 
               <div class="calculator__resource">
@@ -606,7 +608,8 @@
               </div>
             </div>
           </div>
-          <button class="button calculator__btn" data-remodal-target="modal">РАССЧИТАТЬ СТОИМОСТЬ</button>
+          <button class="button calculator__btn">РАССЧИТАТЬ СТОИМОСТЬ</button>
+          <button class="button calculator__btn-discount" data-remodal-target="modal">ПОЛУЧИТЬ СКИДКУ</button>
           <div class="result_calculator">Стоимость: <span> 0 </span> руб.</div>
         </div>
       </div>
@@ -617,87 +620,88 @@
   <!-- / calculator -->
 
   <!-- offer -->
-  <!-- <section class="offer">
+  <section class="offer">
     <div class="offer__wrapper">
       <div class="offer__content">
         <h2 class="offer__title">
-          АКЦИЯ! ПРИВЕДИТЕ ДРУГА И ПОЛУЧИТЕ 500 Р НА ХИМЧИСТКУ
+          АКЦИЯ! ПРИВЕДИТЕ ДРУГА И ПОЛУЧИТЕ 500&nbsp;Р НА ХИМЧИСТКУ
         </h2>
-
         <p class="offer__text">
-          Подробности по телефону:
+          Подробности по телефону:<br>
           <a href="tel:+79522828536" class="offer__link"> +7-952-282-85-36 </a>
         </p>
       </div>
     </div>
-  </section> -->
-  <!-- / offer  -->
+  </section>
+  <!-- / offer -->
 
   <!-- НАШИ РАБОТЫ works -->
-  <!-- <section class="works" id="works">
+  <section class="works" id="works">
     <div class="container-sm">
       <h2 class="works__title">
         НАШИ РАБОТЫ
       </h2>
-      <div class="works__wrapper">
+      <div class="works__wrapper-box">
+        <div class="works__wrapper">
 
-        <div class="works__item img-comp-container">
-          <div class="img-comp-img">
-            <img src="images/works-1-0.jpg">
+          <div class="works__item img-comp-container">
+            <div class="img-comp-img">
+              <img src="images/works-1-0.jpg">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="images/works-1-1.jpg">
+            </div>
           </div>
-          <div class="img-comp-img img-comp-overlay">
-            <img src="images/works-1-1.jpg">
+
+          <div class="works__item img-comp-container">
+            <div class="img-comp-img">
+              <img src="images/works-2-0.jpg">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="images/works-2-1.jpg">
+            </div>
           </div>
+
+          <div class="works__item img-comp-container">
+            <div class="img-comp-img">
+              <img src="images/works-3-0.jpg">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="images/works-3-1.jpg">
+            </div>
+          </div>
+
+          <div class="works__item img-comp-container">
+            <div class="img-comp-img">
+              <img src="images/works-4-0.jpg">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="images/works-4-1.jpg">
+            </div>
+          </div>
+
+          <div class="works__item img-comp-container">
+            <div class="img-comp-img">
+              <img src="images/works-5-0.jpg">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="images/works-5-1.jpg">
+            </div>
+          </div>
+
+          <div class="works__item img-comp-container">
+            <div class="img-comp-img">
+              <img src="images/works-6-0.jpg">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="images/works-6-1.jpg">
+            </div>
+          </div>
+
         </div>
-
-        <div class="works__item img-comp-container">
-          <div class="img-comp-img">
-            <img src="images/works-2-0.jpg">
-          </div>
-          <div class="img-comp-img img-comp-overlay">
-            <img src="images/works-2-1.jpg">
-          </div>
-        </div>
-
-        <div class="works__item img-comp-container">
-          <div class="img-comp-img">
-            <img src="images/works-3-0.jpg">
-          </div>
-          <div class="img-comp-img img-comp-overlay">
-            <img src="images/works-3-1.jpg">
-          </div>
-        </div>
-
-        <div class="works__item img-comp-container">
-          <div class="img-comp-img">
-            <img src="images/works-4-0.jpg">
-          </div>
-          <div class="img-comp-img img-comp-overlay">
-            <img src="images/works-4-1.jpg">
-          </div>
-        </div>
-
-        <div class="works__item img-comp-container">
-          <div class="img-comp-img">
-            <img src="images/works-5-0.jpg">
-          </div>
-          <div class="img-comp-img img-comp-overlay">
-            <img src="images/works-5-1.jpg">
-          </div>
-        </div>
-
-        <div class="works__item img-comp-container">
-          <div class="img-comp-img">
-            <img src="images/works-6-0.jpg">
-          </div>
-          <div class="img-comp-img img-comp-overlay">
-            <img src="images/works-6-1.jpg">
-          </div>
-        </div>
-
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- / works -->
 
   <!-- ОБОРУДОВАНИЕ equipment -->

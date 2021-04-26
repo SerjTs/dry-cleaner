@@ -183,7 +183,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  // margin-right: 42px;
   margin-right: 20px;
   border-radius: 50px;
 
@@ -195,7 +194,6 @@
     }
 
   }
-
 
   &-title {
     margin-bottom: 17px;
@@ -255,7 +253,6 @@ label {
     }
   }
 }
-
 // /mainpage
 
 // pricelist
@@ -394,6 +391,11 @@ label {
     margin-bottom: 25px;
   }
 
+  &__units {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__form {
     position: relative;
   }
@@ -449,6 +451,16 @@ label {
     // background: none;
     // background-color: #ff7406;
     background: linear-gradient(93.46deg, #89F7FE 10.81%, #66A6FF 82.67%);
+    margin-bottom: 30px;
+  }
+  &__btn-discount {
+    // padding: 10px 36px;
+    background: #FF7400;
+    box-shadow: 0px 6px 29px #E5E5E5;
+    color: #fff;
+  }
+  & .result_calculator {
+    display: none;
   }
 }
 
@@ -460,6 +472,8 @@ label {
   margin-right: 20px;
 
   & .quantity {
+    margin: 0;
+    padding: 0;
     font-weight: 600;
     width: 24px;
     text-align: center;
@@ -467,6 +481,8 @@ label {
   }
 
   &__button {
+    padding: 0;
+    margin: 0;
     background: rgba(137, 247, 254, 0.8);
     border-radius: 2px;
     border: none;
@@ -547,7 +563,6 @@ label {
 .options_calc {
   display: none;
 }
-
 // /calculator
 
 // offer
@@ -558,90 +573,105 @@ label {
 
   &::before {
     content: '';
-    width: 329px;
-    height: 242px;
+    width: 796px;
+    height: 287px;
     background-image: url('../images/offer-bubbles-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
+    // left: 20%;
     left: 50%;
-    bottom: -80px;
+    transform: translateX(-50%);
+    bottom: 7px;
     z-index: 1;
   }
 
   &__wrapper {
-    padding: 15px 0 10px;
-    background-color: #FF7400;
+    padding: 0 210px 0 215px;
+    height: 158px;
+    // background-color: #FF7400;
+    background-color: #6BB2FF;
     position: relative;
 
     &::before {
       content: '';
-      width: 485px;
-      height: 344px;
+      width: 359px;
+      height: 158px;
       background-image: url('../images/offer-bubbles-1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
       position: absolute;
-      left: 0;
-      bottom: -80px;
+      left: -100px;
+      bottom: 0;
     }
 
     &::after {
       content: '';
-      width: 471px;
-      height: 354px;
+      width: 359px;
+      height: 158px;
       background-image: url('../images/offer-bubbles-3.png');
+      background-repeat: no-repeat;
+      background-size: cover;
       position: absolute;
-      right: 0;
-      bottom: -80px;
+      right: -100px;
+      bottom: 0px;
     }
   }
 
   &__content {
     max-width: 846px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__title {
-    text-transform: uppercase;
-    margin-right: 50px;
-  }
-
   &__title,
   &__text {
-    flex-basis: 50%;
+    margin: 0;
     font-weight: bold;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 1.25;
     text-align: center;
     color: #FFFFFF;
     z-index: 1;
   }
 
+  &__title {
+    text-transform: uppercase;
+    // margin-right: 20px;
+    flex-basis: 53%;
+  }
+
+  &__text {
+    flex-basis: 46%;
+  }
+
   &__link {
     text-decoration: none;
     color: #FFFFFF;
+    white-space: nowrap;
   }
 }
 
-.container {}
+// .box {
+//   border: 1px solid #000;
+//   width: 200px;
+//   padding: 100px;
+// }
 
-.box {
-  border: 1px solid #000;
-  width: 200px;
-  padding: 100px;
-}
-
-.inner {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #000;
-}
+// .inner {
+//   width: 100px;
+//   height: 100px;
+//   border: 1px solid #000;
+// }
 
 // /offer
 
 // works
 .works {
-  padding: 100px 0 50px;
+  padding: 50px 0;
 
   &__wrapper {
     display: grid;
@@ -693,6 +723,7 @@ label {
     width: 30px;
     height: 30px;
     background-image: url('../images/svg/works-left-arrow.svg');
+    background-size: cover;
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
@@ -704,6 +735,7 @@ label {
     width: 30px;
     height: 30px;
     background-image: url('../images/svg/works-right-arrow.svg');
+    background-size: cover;
     top: 50%;
     transform: translateY(-50%);
     right: 5px;
