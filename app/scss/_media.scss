@@ -398,6 +398,7 @@
   .faq {
     padding: 0 0 20px;
   }
+
   .accordion {
 
     &__header {
@@ -423,6 +424,71 @@
   }
 
   // /faq 1024
+
+
+  //  contacts 1024
+  .contacts {
+
+    &__wrapper {
+      margin: 0 auto;
+      padding: 20px 35px 20px 30px;
+      max-width: 606px;
+      min-height: 111px;
+      background: #FF7400;
+      border-radius: 30px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #fff;
+      align-self: start;
+    }
+
+    &__link {
+      font-size: 24px;
+      color: #fff;
+      white-space: nowrap;
+
+      &::before {
+        display: none;
+      }
+    }
+
+
+  }
+
+  // /contacts 1024
+
+  // footer 1024
+  .footer {
+
+    &__text,
+    &__link-email,
+    &__confidential {
+      font-size: 12px;
+    }
+
+    &__text {
+      margin-bottom: 15px;
+    }
+
+    &__text .span--1 {
+      display: none;
+    }
+
+    &__text .span--2 {
+      display: inline-block;
+    }
+
+
+    &__link-instagram img {
+      width: 14px;
+      height: 13px;
+    }
+  }
+
+  // /footer 1024
 
 }
 
@@ -664,12 +730,25 @@
   // equipment 768
   .equipment {
     padding-bottom: 10px;
+
     &__item {
       flex-basis: 32%;
     }
   }
 
   // /equipment 768
+
+  //  contacts 168
+  .contacts {
+    padding: 50px 10px 70px;
+
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  // /contacts 768
 }
 
 // /@media (max-width: 768px)
@@ -857,15 +936,16 @@
   // /equipment 600
 
   // faq 600
-    .faq {
-      &__wrapper {
-        padding-top: 20px;
-      }
-      &__title {
-        margin-bottom: 20px;
-      }
+  .faq {
+    &__wrapper {
+      padding: 20px 15px;
     }
-   
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+
   // /faq 600
 
 
@@ -895,6 +975,34 @@
   }
 
   // /works 510
+
+  //  contacts 510
+  .contacts {
+    padding: 30px 10px 70px;
+
+    &__title {
+      font-size: 21px;
+    }
+  }
+
+  // /contacts 510
+
+  // footer 510
+  .footer {
+    padding: 10px 0 5px;
+    &__content {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+  }
+
+  // /footer 510
+
 }
 
 // /@media (max-width: 510px)
@@ -925,4 +1033,38 @@
     }
   }
 
+  //  contacts 400
+  .contacts {
+
+    &__title {
+      font-size: 16px;
+    }
+  }
+
+  // /contacts 400
+
+  // footer 400
+  .footer__confidential {
+    font-size: 10px;
+  }
+  // /footer 400
+
 }
+
+// @media (max-width: 400px)
+
+// @media (max-width: 340px)
+@media (max-width: 340px) {
+
+  // /contacts 340
+  .contacts {
+    &__title {
+      font-size: 15px;
+    }
+  }
+
+  // /contacts 340
+
+}
+
+// /@media (max-width: 400px)

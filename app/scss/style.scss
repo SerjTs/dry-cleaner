@@ -792,7 +792,7 @@ label {
   }
 
   &__wrapper {
-    padding: 40px 0 40px;
+    padding: 40px 30px 40px;
     box-shadow: 0px 21px 72px -10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
   }
@@ -864,10 +864,12 @@ label {
 
 // contacts
 .contacts {
-  padding: 70px 0 70px;
+  padding: 70px 10px 70px;
 
   &__wrapper {
+    box-sizing: border-box;
     display: flex;
+    padding: 18px 35px;
     justify-content: space-between;
     align-items: flex-end;
   }
@@ -878,7 +880,7 @@ label {
     font-family: Montserrat;
     font-weight: 800;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 1.25;
   }
 
   &__link {
@@ -888,7 +890,7 @@ label {
     font-style: normal;
     font-weight: 800;
     font-size: 30px;
-    line-height: 37px;
+    line-height: 1.25;
     color: #11325A;
     text-decoration: none;
     position: relative;
@@ -925,12 +927,17 @@ label {
     color: #000;
   }
 
+  &__text .span--2 {
+    display: none;
+  } 
+
   &__link-email {
     padding-left: 10px;
     font-weight: 600;
     font-size: 20px;
     color: #000000;
     text-decoration: none;
+    white-space: nowrap;
   }
 
   &__link-instagram {
