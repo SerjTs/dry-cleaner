@@ -91,15 +91,55 @@
           <span class="card-title">Закажите звонок сегодня<br>
             <span class="card-closeout">и получите скидку 15%</span>
           </span>
-          <form action="Send.php" method="POST" class="form bell">
+
+          <!-- <form action="Send.php" method="POST" class="form bell"> -->
+          <form action="#" class="form bell">
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Профессиональная химчистка мебели">
+            <!-- <input type="hidden" name="admin_email" value="onillsp@gmail.com"> -->
+            <input type="hidden" name="admin_email" value="dry-cleaning@site-master.xyz">
+            <input type="hidden" name="form_subject" value="Форма скидки на 15% в ТОП-секции (main page)">
+            <!-- END Hidden Required Fields -->
             <div class="mainpage-input__group">
-              <input type="text" class="input bell-input" name="name" required minlength="3" placeholder="Введите имя">
+              <input type="text" class="input bell-input" name="Имя_пользователя" required minlength="3"
+                placeholder="Введите имя">
             </div>
             <div class="mainpage-input__group">
-              <input type="text" class="input bell-input phone" name="phone" required minlength="16"
-                placeholder="Введите телефон">
+              <input type="tel" class="input bell-input phone" name="Телефон_пользователя" required minlength="16"
+                maxlength="16" placeholder="Введите телефон">
+              <!-- <input type="tel" name="phone" placeholder="Телефон"
+                  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" /> -->
             </div>
-            <button class="button bell-button">ЗАКАЗАТЬ ЗВОНОК</button>
+            <!-- Скрытые поля для отправки данных калькулятора -->
+            <input class="couch_quantity" type="hidden" name="Диван_количество">
+            <input class="couch_material" type="hidden" name="Диван_материал">
+            <input class="couch_type" type="hidden" name="Диван_тип">
+            <input class="couch_size" type="hidden" name="Диван_размер">
+
+            <input class="armchair_quantity" type="hidden" name="Кресло_количество">
+            <input class="armchair_material" type="hidden" name="Кресло_материал">
+            <input class="armchair_type" type="hidden" name="Кресло_тип">
+
+            <input class="chair_quantity" type="hidden" name="Стул_количество">
+            <input class="chair_material" type="hidden" name="Стул_материал">
+
+            <input class="pouffe_quantity" type="hidden" name="Пуф_количество">
+            <input class="pouffe_material" type="hidden" name="Пуф_материал">
+
+            <input class="mattress_quantity" type="hidden" name="Матрас_количество">
+            <input class="mattress_material" type="hidden" name="Матрас_тип">
+            <input class="mattress_type" type="hidden" name="Матрас_размер">
+
+            <input class="prelast_quantity" type="hidden" name="Спальное_место_количество">
+            <input class="prelast_material" type="hidden" name="Спальное_место_материал">
+
+            <input class="pillow_quantity" type="hidden" name="Съемная_подушка_количество">
+            <input class="pillow_material" type="hidden" name="Съемная_подушка_материал">
+
+            <input class="result-calc" type="hidden" name="Расчёт_калькулятора">
+            <!-- /Скрытые поля для отправки данных калькулятора -->
+
+            <button type="submit" class="button bell-button">ЗАКАЗАТЬ ЗВОНОК</button>
           </form>
         </div>
         <div class="card-img">
@@ -608,9 +648,11 @@
               </div>
             </div>
           </div>
-          <button class="button calculator__btn">РАССЧИТАТЬ СТОИМОСТЬ</button>
+          <button class="button calculator__btn">
+            <div class="initial_calculator">РАССЧИТАТЬ СТОИМОСТЬ</div>
+            <div class="result_calculator">Стоимость: <span> 0 </span> руб.</div>
+          </button>
           <button class="button calculator__btn-discount" data-remodal-target="modal">ПОЛУЧИТЬ СКИДКУ</button>
-          <div class="result_calculator">Стоимость: <span> 0 </span> руб.</div>
         </div>
       </div>
       <span class="calculator__requer">МИНИМАЛЬНАЯ СУММА ЗАКАЗА 2500 р.</span>
@@ -644,59 +686,45 @@
       <div class="works__wrapper-box">
         <div class="works__wrapper">
 
-          <div class="works__item img-comp-container">
-            <div class="img-comp-img">
-              <img src="images/works-1-0.jpg">
-            </div>
-            <div class="img-comp-img img-comp-overlay">
-              <img src="images/works-1-1.jpg">
+      <!-- Слайдер сравнениия изображений -->
+          <div class="works__cocoen-inner">
+            <div class="works__cocoen-item cocoen">
+              <img src="images/works-1-0.jpg" alt="" />
+              <img src="images/works-1-1.jpg" alt="" />
             </div>
           </div>
+          <div class="works__cocoen-inner">
+            <div class="works__cocoen-item cocoen">
+              <img src="images/works-2-0.jpg" alt="" />
+              <img src="images/works-2-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="works__cocoen-inner">
+            <div class="works__cocoen-item cocoen">
+              <img src="images/works-3-0.jpg" alt="" />
+              <img src="images/works-3-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="works__cocoen-inner">
+            <div class="works__cocoen-item cocoen">
+              <img src="images/works-4-0.jpg" alt="" />
+              <img src="images/works-4-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="works__cocoen-inner">
+            <div class="works__cocoen-item cocoen">
+              <img src="images/works-5-0.jpg" alt="" />
+              <img src="images/works-5-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="works__cocoen-inner">
+            <div class="works__cocoen-item cocoen">
+              <img src="images/works-6-0.jpg" alt="" />
+              <img src="images/works-6-1.jpg" alt="" />
+            </div>
+          </div>
+            <!-- /Слайдер сравнениия изображений -->
 
-          <div class="works__item img-comp-container">
-            <div class="img-comp-img">
-              <img src="images/works-2-0.jpg">
-            </div>
-            <div class="img-comp-img img-comp-overlay">
-              <img src="images/works-2-1.jpg">
-            </div>
-          </div>
-
-          <div class="works__item img-comp-container">
-            <div class="img-comp-img">
-              <img src="images/works-3-0.jpg">
-            </div>
-            <div class="img-comp-img img-comp-overlay">
-              <img src="images/works-3-1.jpg">
-            </div>
-          </div>
-
-          <div class="works__item img-comp-container">
-            <div class="img-comp-img">
-              <img src="images/works-4-0.jpg">
-            </div>
-            <div class="img-comp-img img-comp-overlay">
-              <img src="images/works-4-1.jpg">
-            </div>
-          </div>
-
-          <div class="works__item img-comp-container">
-            <div class="img-comp-img">
-              <img src="images/works-5-0.jpg">
-            </div>
-            <div class="img-comp-img img-comp-overlay">
-              <img src="images/works-5-1.jpg">
-            </div>
-          </div>
-
-          <div class="works__item img-comp-container">
-            <div class="img-comp-img">
-              <img src="images/works-6-0.jpg">
-            </div>
-            <div class="img-comp-img img-comp-overlay">
-              <img src="images/works-6-1.jpg">
-            </div>
-          </div>
 
         </div>
       </div>
@@ -891,6 +919,8 @@
   </footer>
   <!-- / footer -->
 
+
+
   <!-- модальное окно -->
   <div class="modal remodal" data-remodal-id="modal">
     <div class="modal__card">
@@ -898,10 +928,47 @@
       <h3 class="modal__card-title">ЗАКАЖИТЕ ЗВОНОК ПРЯМО СЕЙЧАС И ПОЛУЧИТЕ СКИДКУ<br>
       </h3>
       <p class="modal__card-closeout">15%</p>
-      <form action="Send.php" method="POST" class="modal__form">
-        <input type="text" class="modal__form-input" name="name" required minlength="3" placeholder="Введите имя">
-        <input type="text" class="modal__form-input phone" name="phone" required minlength="16"
-          placeholder="Введите телефон">
+      <!-- <form action="#" class="modal__form"> -->
+      <form action="#" class="modal__form">
+        <!-- Hidden Required Fields -->
+        <input type="hidden" name="project_name" value="Профессиональная химчистка мебели">
+        <input type="hidden" name="admin_email" value="dry-cleaning@site-master.xyz">
+        <input type="hidden" name="form_subject" value="Форма скидки на 15% в калькуляторе">
+        <!-- END Hidden Required Fields -->
+        <input type="text" class="modal__form-input" name="Имя_пользователя" required minlength="3"
+          placeholder="Введите имя">
+        <input type="tel" class="modal__form-input phone" name="Телефон_пользователя" required minlength="16"
+          placeholder="Введите телефон" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}"
+          data-rule-required="true" data-rule-minlength="16" data-msg="Введите номер телефона">
+        <!-- Скрытые поля для отправки данных калькулятора -->
+        <input class="couch_quantity" type="hidden" name="Диван_количество">
+        <input class="couch_material" type="hidden" name="Диван_материал">
+        <input class="couch_type" type="hidden" name="Диван_тип">
+        <input class="couch_size" type="hidden" name="Диван_размер">
+
+        <input class="armchair_quantity" type="hidden" name="Кресло_количество">
+        <input class="armchair_material" type="hidden" name="Кресло_материал">
+        <input class="armchair_type" type="hidden" name="Кресло_тип">
+
+        <input class="chair_quantity" type="hidden" name="Стул_количество">
+        <input class="chair_material" type="hidden" name="Стул_материал">
+
+        <input class="pouffe_quantity" type="hidden" name="Пуф_количество">
+        <input class="pouffe_material" type="hidden" name="Пуф_материал">
+
+        <input class="mattress_quantity" type="hidden" name="Матрас_количество">
+        <input class="mattress_material" type="hidden" name="Матрас_тип">
+        <input class="mattress_type" type="hidden" name="Матрас_размер">
+
+        <input class="prelast_quantity" type="hidden" name="Спальное_место_количество">
+        <input class="prelast_material" type="hidden" name="Спальное_место_материал">
+
+        <input class="pillow_quantity" type="hidden" name="Съемная_подушка_количество">
+        <input class="pillow_material" type="hidden" name="Съемная_подушка_материал">
+
+        <input class="result-calc" type="hidden" name="Расчёт_калькулятора">
+        <!-- /Скрытые поля для отправки данных калькулятора -->
+
         <button class="modal__form-button">ЗАКАЗАТЬ ЗВОНОК</button>
       </form>
     </div>
@@ -919,11 +986,31 @@
 
 
 
+  <div class="ba-slider">
+    <img src="images/works-1-0.jpg" alt="">
+    <div class="resize">
+      <img src="images/works-1-1.jpg" alt="">
+    </div>
+    <span class="handle"></span>
+  </div>
+
+  <div class="ba-slider">
+    <img src="images/works-2-0.jpg" alt="">
+    <div class="resize">
+      <img src="images/works-2-1.jpg" alt="">
+    </div>
+    <span class="handle"></span>
+  </div>
+
+
+
+
+  
   <script src="js/jquery-3.6.0.min.js"></script>
-  <!-- <script src="js/parallax.min.js"></script> -->
   <script src="js/jquery.mask.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
   <script src="js/remodal.min.js"></script>
+  <script src="js/cocoen.js"></script>
   <script src="js/main.js"></script>
 </body>
 

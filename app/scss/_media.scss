@@ -280,13 +280,17 @@
 
     &__btn {
       margin-top: 10px;
-      margin-bottom: 25px;
+      min-width: 210px;
     }
 
     &__btn-discount {
       padding: 10px 36px;
+      margin-top: 25px;
       max-width: 160px;
     }
+     & .result_calculator {
+       font-size: 12px;
+     }
   }
 
   // offer 1024px
@@ -534,7 +538,7 @@
     left: 0;
     right: 0;
     background-color: #fff;
-    z-index: 1;
+    z-index: 8;
 
     &-list {
       flex-direction: column;
@@ -713,6 +717,7 @@
     }
 
     &__wrapper {
+      padding: 0 15px;
       row-gap: 30px;
       column-gap: 35px;
     }
@@ -749,6 +754,53 @@
   }
 
   // /contacts 768
+
+  // modal 768
+  .modal {
+
+    &__card {
+      max-width: unset;
+      width: 100%;
+      padding: 60px 30px 40px;
+    }
+
+    &__card-title {
+      font-size: 18px;
+    }
+    &__card-closeout {
+      font-size: 22px;
+    }
+    &__form-input {
+      padding: 9px;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    &__form-button {
+      padding: 25px 40px;
+      font-size: 18px;
+    }
+
+    & .remodal-close {
+      top: 35px;
+      right: 40px;
+      left: auto;
+      color: #000;
+
+      &::before {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .remodal {
+    width: auto;
+    padding: 15px;
+    background: transparent;
+  }
+
+  // /modal 768
+  
 }
 
 // /@media (max-width: 768px)
@@ -960,6 +1012,7 @@
   .works {
 
     &__wrapper {
+      padding: 0 5px;
       display: inline-grid;
       grid-template-columns: 1fr;
       row-gap: 30px;
